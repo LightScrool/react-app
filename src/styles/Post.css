@@ -1,0 +1,17 @@
+.Post{
+    border: solid 2px palegreen;
+    padding: 10px;
+    margin-bottom: 20px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.Post__content{
+    width: 90%;
+}
+
+.Post__text{
+    margin-top: 8px;
+    font-size: 16px;
+}

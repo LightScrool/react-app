@@ -1,0 +1,11 @@
+.Navigation{
+    display: flex;
+    justify-content: flex-end;
+}
+
+.Navigation__item{
+    margin-left: 50px;
+    font-size: 18px;
+    font-weight: 800;
+    cursor: pointer;
+}

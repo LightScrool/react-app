@@ -1,0 +1,24 @@
+.Posts__not-found{
+    width: 100%;
+    text-align: center;
+}
+
+/* react-transition-group animations*/
+.post-enter {
+    opacity: 0;
+    transform: translateX(-300px);
+}
+.post-enter-active {
+    opacity: 1;
+    transform: none;
+    transition: all .4s;
+}
+.post-exit {
+    opacity: 1;
+    transform: none;
+}
+.post-exit-active {
+    opacity: 0;
+    transform: translateX(-300px);
+    transition: all .4s;
+}

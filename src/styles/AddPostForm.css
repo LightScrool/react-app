@@ -1,0 +1,12 @@
+.AddPostForm *{
+    display: block;
+}
+
+.AddPostForm__Input{
+    width: 550px;
+    margin-bottom: 25px;
+}
+
+.AddPostForm__Button{
+    margin: auto;
+}
