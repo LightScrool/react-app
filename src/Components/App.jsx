@@ -5,20 +5,28 @@ import Container from "./UI/Container/Container";
 import PostManager from "./PostManager";
 import {fetchPosts} from "../data";
 import Loader from "./UI/Loader/Loader";
+import useFetching from "../hooks/useFetching";
+import PageList from "./PageList";
+
 
 function App() {
     // States
     const [posts, setPosts] = useState([])
-    const [searchQuery, setSearchQuery] = useState(null);
+    const [searchQuery, setSearchQuery] = useState("");
+    const [totalPostCount, setTotalPostCount] = useState(0);
+    const [currentPage, setCurrentPage] = useState(1);
 
     // Data reading on component mount
-    const [postsIsLoad, setPostsIsLoad] = useState(false);
+    const [postsFetching, postsIsLoading] = useFetching(async (...args) => {
+        const fetchedPosts = await fetchPosts(...args);
+        const posts = fetchedPosts.data ?? [];
+        setTotalPostCount(parseInt(fetchedPosts.headers["x-total-count"]));
+        setPosts(posts);
+    });
+
     useEffect(() => {
-        fetchPosts().then(result => {
-            setPosts(result);
-            setPostsIsLoad(true);
-        });
-    }, [])
+        postsFetching(currentPage).then();
+    }, [currentPage])
 
     // Posts sorting
     const sortPosts = (_sortField) => {
@@ -44,8 +52,10 @@ function App() {
     return (
         <div className="App">
             {
-                postsIsLoad
+                postsIsLoading
                 ?
+                <Loader/>
+                :
                 <Container>
                     <PostManager
                         posts={posts}
@@ -53,10 +63,13 @@ function App() {
                         sortPosts={sortPosts}
                         setSearchQuery={setSearchQuery}
                     />
-                    <Posts posts={getQueryPosts()} setPosts={setPosts}/>
+                    <PageList
+                        totalPostCount={totalPostCount}
+                        currentPage={currentPage}
+                        setCurrentPage={setCurrentPage}
+                    />
+                    <Posts posts={getQueryPosts()} setPosts={setPosts} currentPage={currentPage}/>
                 </Container>
-                :
-                <Loader/>
             }
         </div>
     );

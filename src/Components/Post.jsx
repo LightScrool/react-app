@@ -5,7 +5,7 @@ import MyButton from "./UI/MyButton/MyButton";
 const Post = ({post, postIndex, posts, setPosts}) => {
 
     const deletePost = () => {
-        setPosts(posts.filter(curentPost => curentPost.id !== post.id));
+        setPosts(posts.filter(currentPost => currentPost.id !== post.id));
     }
 
     return (

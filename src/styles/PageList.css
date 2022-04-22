@@ -1,0 +1,29 @@
+.PageList{
+    display: flex;
+    justify-content: center;
+    margin-bottom: 25px;
+}
+
+.PageListButton{
+    width: 35px;
+    height: 35px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 3px;
+
+    cursor: pointer;
+    color: #777;
+    border-radius: 5px;
+    border: 1px solid palegreen;
+}
+
+.PageListButton:hover{
+    border-width: 2px;
+    color: #000;
+}
+
+.PageListButton._active{
+    font-weight: 800;
+    border-width: 3px;
+}
