@@ -1,4 +1,42 @@
 .MainPage{
-    position: absolute;
-    top:500px;
+    height: 100vh;
+    padding: 130px;
+}
+
+.MainPage__title{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 50px;
+    line-height: 0.95;
+    color: #333;
+
+    text-align: center;
+}
+
+.MainPage__content{
+    margin-top: 30px;
+
+    display: flex;
+    justify-content: space-between;
+}
+
+.MainPage__photo{
+    width: 48%;
+}
+.MainPage__photo svg{
+    width: 100%;
+    height: auto;
+}
+
+.MainPage__text{
+    width: 52%;
+    padding-left: 35px;
+
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #999;
+    line-height: 1.6;
+
+    display: flex;
+    align-items: center;
 }
