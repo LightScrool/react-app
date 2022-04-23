@@ -1,15 +1,15 @@
-import '../styles/App.css';
+import '../styles/PostsPage.css';
 import {useEffect, useState} from "react";
-import Posts from "./Posts";
-import Container from "./UI/Container/Container";
-import PostManager from "./PostManager";
+import Posts from "../Components/Posts";
+import Container from "../Components/UI/Container/Container";
+import PostManager from "../Components/PostManager";
 import {fetchPosts} from "../data";
-import Loader from "./UI/Loader/Loader";
+import Loader from "../Components/UI/Loader/Loader";
 import useFetching from "../hooks/useFetching";
-import PageList from "./PageList";
+import PageList from "../Components/PageList";
 
 
-function App() {
+function PostsPage() {
     // States
     const [posts, setPosts] = useState([])
     const [searchQuery, setSearchQuery] = useState("");
@@ -51,11 +51,6 @@ function App() {
     // Rendering
     return (
         <div className="App">
-            {
-                postsIsLoading
-                ?
-                <Loader/>
-                :
                 <Container>
                     <PostManager
                         posts={posts}
@@ -68,11 +63,18 @@ function App() {
                         currentPage={currentPage}
                         setCurrentPage={setCurrentPage}
                     />
-                    <Posts posts={getQueryPosts()} setPosts={setPosts} currentPage={currentPage}/>
+                    {
+                        postsIsLoading
+                        ?
+                        <div style={{display: 'flex', justifyContent: 'center', marginTop: '230px'}}>
+                            <Loader styles={{margin: 'auto'}}/>
+                        </div>
+                        :
+                        <Posts posts={getQueryPosts()} setPosts={setPosts} currentPage={currentPage}/>
+                    }
                 </Container>
-            }
         </div>
     );
 }
 
-export default App;
+export default PostsPage;

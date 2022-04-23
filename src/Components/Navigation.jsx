@@ -4,9 +4,9 @@ import '../styles/Navigation.css'
 const Navigation = () => {
     return (
         <ul className="Navigation">
-            <li className="Navigation__item">About</li>
-            <li className="Navigation__item">Work</li>
-            <li className="Navigation__item">Section</li>
+            <li className="Navigation__item">Posts</li>
+            <li className="Navigation__item">Sliders</li>
+            <li className="Navigation__item">Scroll</li>
         </ul>
     );
 };
