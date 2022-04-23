@@ -1,11 +1,11 @@
 import React, {useState} from 'react';
 import "../styles/SlidersPage.css"
 import Container from "../Components/UI/Container/Container";
-import MySliderSlide from "../Components/MySlider/MySliderSlide";
-import MySliderDots from "../Components/MySlider/MySliderDots";
+import MySliderSlide from "../Components/MySlider/js/MySliderSlide";
+import MySliderDots from "../Components/MySlider/js/MySliderDots";
 import {MySliderData} from '../data';
 import {CSSTransition, SwitchTransition} from "react-transition-group";
-import MySlider from "../Components/MySlider/MySlider";
+import MySlider from "../Components/MySlider/js/MySlider";
 
 const SlidersPage = () => {
     const [data, setData] = useState(MySliderData);

@@ -7,6 +7,7 @@ import SlidersPage from "./Pages/SlidersPage";
 function App() {
     return (
         <>
+            <Header/>
             <BrowserRouter>
                 <Routes>
                     <Route path="/posts" element={<PostsPage/>}/>

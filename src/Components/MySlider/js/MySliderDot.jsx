@@ -1,5 +1,5 @@
 import React from 'react';
-import './MySliderDot.css';
+import '../styles/MySliderDot.css';
 
 const MySliderDot = ({data, index, activeSlide, setActiveSlide}) => {
     return (

@@ -1,5 +1,5 @@
 import React from 'react';
-import './MySliderSlide.css'
+import '../styles/MySliderSlide.css'
 
 const MySliderSlide = ({data, index, activeSlide}) => {
     return(
