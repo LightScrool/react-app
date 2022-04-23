@@ -4,7 +4,7 @@ import PostsPage from "./Pages/PostsPage";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import SlidersPage from "./Pages/SlidersPage";
 import MainPage from "./Pages/MainPage";
-import Footer from "./Components/Footer";
+import PageNotFound from "./Pages/PageNotFound";
 
 function App() {
     return (
@@ -14,6 +14,7 @@ function App() {
                 <Route path="/" element={<MainPage/>}/>
                 <Route path="/posts" element={<PostsPage/>}/>
                 <Route path="/sliders" element={<SlidersPage/>}/>
+                <Route path="*" element={<PageNotFound/>}/>
             </Routes>
         </BrowserRouter>
     );
