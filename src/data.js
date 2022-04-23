@@ -12,4 +12,31 @@ async function fetchPosts(_page=1){
     });
 }
 
-export {fetchPosts, MAX_POSTS_PER_PAGE};
+const MySliderData = [
+    {
+        "name": "Intro",
+        "title": "Welcome to MoGo",
+        "suptitle": "Creative Template",
+        "buttonText": "Learn more"
+    },
+    {
+        "name": "Work",
+        "title": "Good work",
+        "suptitle": "We do this",
+        "buttonText": "Our work"
+    },
+    {
+        "name": "About",
+        "title": "Our company",
+        "suptitle": "About us",
+        "buttonText": "Explore"
+    },
+    {
+        "name": "Contacts",
+        "title": "We have contacts",
+        "suptitle": "But not for you",
+        "buttonText": "Contact us"
+    }
+]
+
+export {fetchPosts, MAX_POSTS_PER_PAGE, MySliderData};
