@@ -9,7 +9,8 @@
 
     font-family: 'Montserrat', sans-serif;
     font-size: 14px;
-    text-transform: uppercase; /*Верхний регистр*/
+    text-transform: uppercase;
+    color: #333;
 
     cursor: pointer;
     padding-bottom: 2px;
