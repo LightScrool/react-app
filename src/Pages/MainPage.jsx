@@ -2,9 +2,11 @@ import React from 'react';
 import '../styles/MainPage.css';
 import image from '../assets/images/my-photo.jpg';
 import Container from "../Components/UI/Container/Container";
+import Footer from "../Components/Footer";
 
 const MainPage = () => {
     return (
+        <>
         <div className="MainPage">
             <Container>
                 <h1 className="MainPage__title">
@@ -30,7 +32,9 @@ const MainPage = () => {
                 </div>
             </Container>
         </div>
-    );
+        <Footer/>
+        </>
+);
 };
 
 export default MainPage;

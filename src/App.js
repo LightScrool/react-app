@@ -4,6 +4,7 @@ import PostsPage from "./Pages/PostsPage";
 import {BrowserRouter, Routes, Route} from "react-router-dom";
 import SlidersPage from "./Pages/SlidersPage";
 import MainPage from "./Pages/MainPage";
+import Footer from "./Components/Footer";
 
 function App() {
     return (
