@@ -1,6 +1,6 @@
 .Post{
-    border: solid 2px palegreen;
-    padding: 10px;
+    border: solid 2px #BBB;
+    padding: 15px;
     margin-bottom: 20px;
 
     display: flex;
@@ -8,10 +8,24 @@
 }
 
 .Post__content{
-    width: 90%;
+    width: 85%;
+}
+
+.Post__title{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 24px;
+    color: #333;
 }
 
 .Post__text{
     margin-top: 8px;
+
+    font-family: 'Roboto', sans-serif;
     font-size: 16px;
+    color: #999;
+    line-height: 1.6;
+}
+
+.Post__button{
+    margin: auto 0;
 }

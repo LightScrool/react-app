@@ -5,20 +5,19 @@
     min-width: 70px;
     padding: 0 12px;
 
-    border-radius: 5px;
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
 
-    font-size: 15px;
-    font-weight: 600;
-
-    color: black;
-    background-color: palegreen;
+    background-color: transparent;
+    border: 2px solid #f38181;
     cursor: pointer;
 }
 
 .MySelect__item{
-    font-size: 15px;
-    font-weight: 600;
-
-    color: black;
-    background-color: palegreen;
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 14px;
 }

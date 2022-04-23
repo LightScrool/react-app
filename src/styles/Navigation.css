@@ -5,7 +5,19 @@
 
 .Navigation__item{
     margin-left: 50px;
-    font-size: 18px;
-    font-weight: 800;
+    transform: translateY(4px);
+
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    text-transform: uppercase; /*Верхний регистр*/
+
     cursor: pointer;
+    padding-bottom: 2px;
+    border-bottom: 2px solid transparent;
+    transition: all .2s linear;
+}
+
+.Navigation__item:hover{
+    color: #f38181;
+    border-color: #f38181;
 }

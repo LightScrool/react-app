@@ -6,4 +6,6 @@ function getRange(start, end, step = 1){
     return array;
 }
 
-export {getRange};
+const getTitled= (str) => str[0].toUpperCase() + str.slice(1)
+
+export {getRange, getTitled};

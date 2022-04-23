@@ -13,17 +13,16 @@
     margin: 3px;
 
     cursor: pointer;
-    color: #777;
-    border-radius: 5px;
-    border: 1px solid palegreen;
+    color: #333;
+    border: 1px solid #BBB;
 }
 
 .PageListButton:hover{
+    color: #f38181;
     border-width: 2px;
-    color: #000;
 }
 
 .PageListButton._active{
     font-weight: 800;
-    border-width: 3px;
+    border: 3px solid #f38181;
 }
