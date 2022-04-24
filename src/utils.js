@@ -6,6 +6,10 @@ function getRange(start, end, step = 1){
     return array;
 }
 
-const getTitled= (str) => str[0].toUpperCase() + str.slice(1)
+function getTitled(str){
+    if (!str)
+        return str;
+    return str[0].toUpperCase() + str.slice(1);
+}
 
 export {getRange, getTitled};

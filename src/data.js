@@ -12,6 +12,14 @@ async function fetchPosts(_page=1){
     });
 }
 
+async function fetchSinglePost(id){
+    return await axios.get(`${POSTS_DATA_URL}/${id}`);
+}
+
+async function fetchPostComments(id){
+    return await axios.get(`${POSTS_DATA_URL}/${id}/comments`);
+}
+
 const MySliderData = [
     {
         "name": "Intro",
@@ -39,4 +47,4 @@ const MySliderData = [
     }
 ]
 
-export {fetchPosts, MAX_POSTS_PER_PAGE, MySliderData};
+export {fetchPosts, fetchSinglePost, fetchPostComments, MAX_POSTS_PER_PAGE, MySliderData};

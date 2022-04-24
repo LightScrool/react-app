@@ -67,7 +67,7 @@ function PostsPage() {
                         postsIsLoading
                         ?
                         <div style={{display: 'flex', justifyContent: 'center', marginTop: '230px'}}>
-                            <Loader styles={{margin: 'auto'}}/>
+                            <Loader/>
                         </div>
                         :
                         <Posts posts={getQueryPosts()} setPosts={setPosts} currentPage={currentPage}/>

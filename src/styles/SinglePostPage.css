@@ -1,0 +1,24 @@
+.SinglePostPage{
+    padding-top: 130px;
+}
+
+.SinglePostPage__title{
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 35px;
+    line-height: 0.95;
+    color: #333;
+
+    text-align: center;
+
+    margin-bottom: 50px;
+}
+
+.SinglePostPage__text{
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    color: #999;
+    line-height: 1.6;
+
+    text-indent: 30px;
+}
