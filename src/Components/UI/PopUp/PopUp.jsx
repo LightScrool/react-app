@@ -3,6 +3,7 @@ import classes from "./PopUp.module.css";
 
 const PopUp = ({children, className, visible, setVisible, ...props}) => {
     return (
+        //TODO: удаление при исчезновении
         <div
             className={visible ? `${classes.PopUp}` : `${classes._inactive} ${classes.PopUp}`}
             onClick={() => setVisible(false)}

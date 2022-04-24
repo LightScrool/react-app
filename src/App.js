@@ -5,6 +5,7 @@ import {BrowserRouter, Routes, Route} from "react-router-dom";
 import SlidersPage from "./Pages/SlidersPage";
 import MainPage from "./Pages/MainPage";
 import PageNotFound from "./Pages/PageNotFound";
+import SinglePostPage from "./Pages/SinglePostPage";
 
 function App() {
     return (
@@ -12,7 +13,8 @@ function App() {
             <Header/>
             <Routes>
                 <Route path="/" element={<MainPage/>}/>
-                <Route path="/posts" element={<PostsPage/>}/>
+                <Route exact path="/posts" element={<PostsPage/>}/>
+                <Route exact path="/posts/:id" element={<SinglePostPage/>}/>
                 <Route path="/sliders" element={<SlidersPage/>}/>
                 <Route path="*" element={<PageNotFound/>}/>
             </Routes>
