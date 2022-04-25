@@ -14,6 +14,7 @@ const Posts = ({posts, setPosts, currentPage}) => {
             <TransitionGroup>
             {
                 posts.map(post => {
+                    // TODO: Solution without findDOMNode
                     postIndex++;
                     return (
                         <CSSTransition key={post.id} timeout={500} classNames="post">
