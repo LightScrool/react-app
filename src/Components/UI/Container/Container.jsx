@@ -1,12 +1,16 @@
 import React from 'react';
 import classes from './Container.module.css'
 
-const Container = ({children, className, ...props}) => {
+const Container = React.forwardRef(({children, className, ...props}, ref) => {
     return (
-        <div className={`${classes.Container} ${className}`} {...props}>
+        <div
+            ref={ref}
+            className={classes.Container + (` ${className}` ?? '')}
+            {...props}
+        >
             {children}
         </div>
     );
-};
+});
 
 export default Container;

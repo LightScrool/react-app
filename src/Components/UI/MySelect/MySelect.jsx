@@ -1,9 +1,14 @@
 import React from 'react';
 import classes from './MySelect.module.css';
 
-const MySelect = ({data, title, className, ...props}) => {
+const MySelect = React.forwardRef(({data, title, className, ...props}, ref) => {
     return (
-        <select className={`${classes.MySelect} ${className}`} {...props} defaultValue={title}>
+        <select
+            ref={ref}
+            className={classes.MySelect + (` ${className}` ?? '')}
+            defaultValue={title}
+            {...props}
+        >
             <option value={title} disabled={true}>{title}</option>
             {Object.keys(data).map(key => {
                 return(
@@ -12,6 +17,6 @@ const MySelect = ({data, title, className, ...props}) => {
             })}
         </select>
     );
-};
+});
 
 export default MySelect;

@@ -1,10 +1,14 @@
 import React from 'react';
 import classes from './Loader.module.css';
 
-const Loader = () => {
+const Loader = React.forwardRef(({className, ...props}, ref) => {
     return (
-        <div className={classes.Loader}/>
+        <div
+            ref={ref}
+            className={classes.Loader + (` ${className}` ?? '')}
+            {...props}
+        />
     );
-};
+});
 
 export default Loader;

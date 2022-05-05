@@ -1,10 +1,11 @@
 import React from 'react';
 import classes from "./PopUp.module.css";
 
-const PopUp = ({children, className, visible, setVisible, ...props}) => {
+const PopUp = React.forwardRef(({children, className, visible, setVisible, ...props}, ref) => {
     return (
         //TODO: удаление при исчезновении
         <div
+            ref={ref}
             className={visible ? `${classes.PopUp}` : `${classes._inactive} ${classes.PopUp}`}
             onClick={() => setVisible(false)}
         >
@@ -22,6 +23,6 @@ const PopUp = ({children, className, visible, setVisible, ...props}) => {
             </div>
         </div>
     );
-};
+});
 
 export default PopUp;
