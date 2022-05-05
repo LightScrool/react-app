@@ -3,6 +3,7 @@ import '../styles/MySlider.css'
 import MySliderSlide from "./MySliderSlide";
 
 const MySlider = ({data, activeSlide}) => {
+    // TODO: Rewrite on react-transition-group
     let index = 0;
     return (
         <div className="MySlider">
