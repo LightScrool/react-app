@@ -21,7 +21,6 @@ const PopUp = React.forwardRef(({
                 enter: 0,
                 exit: animationDuration
             }}
-            appear={true}
             mountOnEnter
             unmountOnExit
         >
