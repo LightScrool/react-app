@@ -48,8 +48,7 @@ const PopUp = React.forwardRef(({
                         </div>
                     </div>
                 )
-            }
-            }
+            }}
         </Transition>
     );
 });
