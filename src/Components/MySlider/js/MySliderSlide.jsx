@@ -2,9 +2,8 @@ import React, {useRef} from 'react';
 import '../styles/MySliderSlide.scss'
 import {Transition} from "react-transition-group";
 
-const MySliderSlide = ({data, index, activeSlide}) => {
+const MySliderSlide = ({data, index, activeSlide, ANIMATION_DURATION}) => {
     const nodeRef = useRef(null);
-    const animationDuration = 500;
 
     return (
         <Transition
@@ -12,7 +11,7 @@ const MySliderSlide = ({data, index, activeSlide}) => {
             in={index === activeSlide}
             timeout={{
                 enter: 0,
-                exit: animationDuration
+                exit: ANIMATION_DURATION
             }}
             mountOnEnter
             unmountOnExit
@@ -22,7 +21,7 @@ const MySliderSlide = ({data, index, activeSlide}) => {
                     <div
                         ref={nodeRef}
                         className={`MySliderSlide ${state}`}
-                        style={{transition: `all ${animationDuration}ms`}}
+                        style={{transition: `all ${ANIMATION_DURATION}ms`}}
                     >
                         <h2 className="MySliderSlide__subtitle">{data.suptitle}</h2>
                         <h1 className="MySliderSlide__title">{data.title}</h1>

@@ -7,11 +7,14 @@ const PopUp = React.forwardRef(({
                                     className,
                                     visible,
                                     setVisible,
-                                    animationDuration = 300,
+                                    ANIMATION_DURATION = 300,
                                     ...props
                                 }, ref) => {
+
     const nodeRef = useRef(null);
     ref = ref ?? nodeRef;
+
+    const animationStyle = {transition: `all ${ANIMATION_DURATION}ms`};
 
     return (
         <Transition
@@ -19,7 +22,7 @@ const PopUp = React.forwardRef(({
             in={visible}
             timeout={{
                 enter: 0,
-                exit: animationDuration
+                exit: ANIMATION_DURATION
             }}
             mountOnEnter
             unmountOnExit
@@ -30,12 +33,12 @@ const PopUp = React.forwardRef(({
                     <div
                         ref={ref}
                         className={classes.PopUp + ` ${TransitionStateClass}`}
-                        style={{transition: `background ${animationDuration}ms`}}
+                        style={animationStyle}
                         onClick={() => setVisible(false)}
                     >
                         <div
                             className={classes.PopUp__Content + (className ? ` ${className}` : '') + ` ${TransitionStateClass}`}
-                            style={{transition: `transform ${animationDuration}ms`}}
+                            style={animationStyle}
                             onClick={event => event.stopPropagation()}
                             {...props}
                         >

@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/MySliderDots.css'
 import MySliderDot from "./MySliderDot";
 
-const MySliderDots = ({data, activeSlide, setActiveSlide}) => {
+const MySliderDots = ({data, activeSlide, setActiveSlide, ANIMATION_DURATION}) => {
     let index = 0;
 
     return (
@@ -15,6 +15,7 @@ const MySliderDots = ({data, activeSlide, setActiveSlide}) => {
                         data={item}
                         activeSlide={activeSlide}
                         setActiveSlide={setActiveSlide}
+                        ANIMATION_DURATION={ANIMATION_DURATION}
                     />
                 )
             })}

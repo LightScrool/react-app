@@ -2,7 +2,7 @@ import React from 'react';
 import '../styles/MySlider.css'
 import MySliderSlide from "./MySliderSlide";
 
-const MySlider = ({data, activeSlide}) => {
+const MySlider = ({data, activeSlide, ANIMATION_DURATION}) => {
     // TODO: Rewrite on react-transition-group
     let index = 0;
     return (
@@ -14,6 +14,7 @@ const MySlider = ({data, activeSlide}) => {
                         index={index++}
                         data={item}
                         activeSlide={activeSlide}
+                        ANIMATION_DURATION={ANIMATION_DURATION}
                     />
                 )
             })}
