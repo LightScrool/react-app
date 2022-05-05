@@ -2,7 +2,7 @@ import React from 'react';
 import {MAX_POSTS_PER_PAGE} from '../data';
 import '../styles/Posts.css';
 import Post from "./Post";
-import {CSSTransition, TransitionGroup} from "react-transition-group";
+import {TransitionGroup} from "react-transition-group";
 
 const Posts = ({posts, setPosts, currentPage}) => {
     let localPostIndex = 0;
@@ -14,17 +14,18 @@ const Posts = ({posts, setPosts, currentPage}) => {
             <TransitionGroup>
             {
                 posts.map(post => {
-                    // TODO: Solution without findDOMNode
                     localPostIndex++;
                     return (
-                        <CSSTransition key={post.id} timeout={500} classNames="post">
-                            <Post
-                                post={post}
-                                postIndex={localPostIndex + (currentPage-1)*MAX_POSTS_PER_PAGE}
-                                posts={posts}
-                                setPosts={setPosts}
-                            />
-                        </CSSTransition>
+                        // CSSTransition is located inside "Post" component, because each of CSSTransitions
+                        // needs its own ref, and it is forbidden to use useRef (and any other hooks)
+                        // inside callback
+                        <Post
+                            key={post.id}
+                            post={post}
+                            postIndex={localPostIndex + (currentPage-1)*MAX_POSTS_PER_PAGE}
+                            posts={posts}
+                            setPosts={setPosts}
+                        />
                     )
                 })
             }
