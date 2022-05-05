@@ -1,12 +1,12 @@
 import React, {useEffect, useState} from 'react';
-import "../styles/SinglePostPage.css";
-import Container from "../Components/UI/Container/Container";
+import "./SinglePostPage.scss";
+import Container from "../../Components/UI/Container/Container";
 import {useParams} from "react-router-dom";
-import useFetching from "../hooks/useFetching";
-import {fetchSinglePost, fetchPostComments} from "../data";
-import Loader from "../Components/UI/Loader/Loader";
-import {getTitled} from "../utils"
-import PostComments from "../Components/PostComments";
+import useFetching from "../../hooks/useFetching";
+import {fetchSinglePost, fetchPostComments} from "../../data";
+import Loader from "../../Components/UI/Loader/Loader";
+import {getTitled} from "../../utils"
+import PostComments from "../../Components/PostComments";
 
 const SinglePostPage = () => {
     // Reading params from URL address

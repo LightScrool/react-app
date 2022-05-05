@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from "./ImageInsideSVG.module.css";
+import classes from "./ImageInsideSVG.module.scss";
 
 const ImageInsideSvg = React.forwardRef(({
                                              viewBox = "0 0 100 100",

@@ -14,8 +14,8 @@
 
     transition: all .2s;
 
-}
-.MyButton:hover{
-    background-color: transparent;
-    color: #333;
+    &:hover{
+        background-color: transparent;
+        color: #333;
+    }
 }

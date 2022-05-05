@@ -1,5 +1,5 @@
 import React, {useRef} from 'react';
-import '../styles/Post.css';
+import '../styles/Post.scss';
 import MyButton from "./UI/MyButton/MyButton";
 import {getTitled} from '../utils';
 import {useLocation, useNavigate} from "react-router-dom";

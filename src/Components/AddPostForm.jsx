@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import '../styles/AddPostForm.css';
+import '../styles/AddPostForm.scss';
 import MyInput from "./UI/MyInput/MyInput";
 import MyButton from "./UI/MyButton/MyButton";
 

@@ -1,8 +1,8 @@
 import React from 'react';
-import '../styles/MainPage.css';
-import Container from "../Components/UI/Container/Container";
-import Footer from "../Components/Footer";
-import MyPhoto from "../Components/MyPhoto";
+import './MainPage.scss';
+import Container from "../../Components/UI/Container/Container";
+import Footer from "../../Components/Footer";
+import MyPhoto from "../../Components/MyPhoto";
 
 const MainPage = () => {
     return (

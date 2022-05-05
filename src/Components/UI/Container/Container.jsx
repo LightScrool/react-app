@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './Container.module.css'
+import classes from './Container.module.scss'
 
 const Container = React.forwardRef(({children, className, ...props}, ref) => {
     return (

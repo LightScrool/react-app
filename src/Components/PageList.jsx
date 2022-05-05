@@ -1,7 +1,7 @@
 import React from 'react';
 import {MAX_POSTS_PER_PAGE} from '../data';
 import {getRange} from '../utils';
-import '../styles/PageList.css'
+import '../styles/PageList.scss'
 
 const PageList = ({totalPostCount, currentPage, setCurrentPage}) => {
     const pageCount = Math.ceil(totalPostCount / MAX_POSTS_PER_PAGE);
@@ -13,7 +13,7 @@ const PageList = ({totalPostCount, currentPage, setCurrentPage}) => {
         <ul className="PageList">
             {/* Decrement button*/}
             <li
-                className={"PageListButton"}
+                className={"PageList__Button"}
                 onClick={() => setCurrentPage(currentPage === 1? 1 : currentPage - 1)}
             >
                 <i className="fa-solid fa-arrow-left"/>
@@ -24,7 +24,7 @@ const PageList = ({totalPostCount, currentPage, setCurrentPage}) => {
                 return (
                     <li
                         key={page}
-                        className={page === currentPage ? "PageListButton _active" : "PageListButton"}
+                        className={page === currentPage ? "PageList__Button _active" : "PageList__Button"}
                         onClick={() => setCurrentPage(page)}
                     >
                         {page}
@@ -34,7 +34,7 @@ const PageList = ({totalPostCount, currentPage, setCurrentPage}) => {
 
             {/* Increment button*/}
             <li
-                className={"PageListButton"}
+                className={"PageList__Button"}
                 onClick={() => setCurrentPage(currentPage === pageCount? pageCount : currentPage + 1)}
             >
                 <i className="fa-solid fa-arrow-right"/>

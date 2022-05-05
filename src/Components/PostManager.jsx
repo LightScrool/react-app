@@ -1,5 +1,5 @@
 import React, {useState} from 'react';
-import '../styles/PostManager.css';
+import '../styles/PostManager.scss';
 import MyButton from "./UI/MyButton/MyButton";
 import MySelect from "./UI/MySelect/MySelect";
 import MyInput from "./UI/MyInput/MyInput";
@@ -31,7 +31,7 @@ const PostManager = ({posts, setPosts ,setSearchQuery, sortPosts}) => {
                 onChange={event => sortPosts(event.target.value)}
             />
             <MyInput
-                className='PostManager_search'
+                className='PostManager__search'
                 placeholder='Поиск...'
                 onChange={event => setSearchQuery(event.target.value)}
             />

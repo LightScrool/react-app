@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './MySelect.module.css';
+import classes from './MySelect.module.scss';
 
 const MySelect = React.forwardRef(({data, title, className, ...props}, ref) => {
     return (

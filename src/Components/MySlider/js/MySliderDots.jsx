@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/MySliderDots.css'
+import '../styles/MySliderDots.scss'
 import MySliderDot from "./MySliderDot";
 
 const MySliderDots = ({data, activeSlide, setActiveSlide, ANIMATION_DURATION}) => {

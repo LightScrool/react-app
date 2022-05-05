@@ -1,9 +1,9 @@
 import React, {useState} from 'react';
-import "../styles/SlidersPage.css"
-import Container from "../Components/UI/Container/Container";
-import MySliderDots from "../Components/MySlider/js/MySliderDots";
-import {MySliderData} from '../data';
-import MySlider from "../Components/MySlider/js/MySlider";
+import "./SlidersPage.scss"
+import Container from "../../Components/UI/Container/Container";
+import MySliderDots from "../../Components/MySlider/js/MySliderDots";
+import {MySliderData} from '../../data';
+import MySlider from "../../Components/MySlider/js/MySlider";
 
 const SlidersPage = () => {
     const [activeSlide, setActiveSlide] = useState(0); // Index of active slide

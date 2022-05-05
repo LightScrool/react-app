@@ -1,5 +1,5 @@
 import React from 'react';
-import "../styles/PostComments.css";
+import "../styles/PostComments.scss";
 import {getTitled} from "../utils"
 
 const PostComments = ({comments}) => {

@@ -1,8 +1,8 @@
-import MainPage from "./Pages/MainPage";
-import PostsPage from "./Pages/PostsPage";
-import SinglePostPage from "./Pages/SinglePostPage";
-import SlidersPage from "./Pages/SlidersPage";
-import PageNotFound from "./Pages/PageNotFound";
+import MainPage from "./Pages/MainPage/MainPage";
+import PostsPage from "./Pages/PostsPage/PostsPage";
+import SinglePostPage from "./Pages/SinglePostPage/SinglePostPage";
+import SlidersPage from "./Pages/SlidersPage/SlidersPage";
+import PageNotFound from "./Pages/PageNotFound/PageNotFound";
 
 const routes = [
     {path: "/", exact: true, element: <MainPage/>},

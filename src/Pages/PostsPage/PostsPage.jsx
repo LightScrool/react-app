@@ -1,12 +1,12 @@
-import '../styles/PostsPage.css';
+import './PostsPage.scss';
 import {useEffect, useState} from "react";
-import Posts from "../Components/Posts";
-import Container from "../Components/UI/Container/Container";
-import PostManager from "../Components/PostManager";
-import {fetchPosts} from "../data";
-import Loader from "../Components/UI/Loader/Loader";
-import useFetching from "../hooks/useFetching";
-import PageList from "../Components/PageList";
+import Posts from "../../Components/Posts";
+import Container from "../../Components/UI/Container/Container";
+import PostManager from "../../Components/PostManager";
+import {fetchPosts} from "../../data";
+import Loader from "../../Components/UI/Loader/Loader";
+import useFetching from "../../hooks/useFetching";
+import PageList from "../../Components/PageList";
 
 
 function PostsPage() {

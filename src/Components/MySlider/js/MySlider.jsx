@@ -1,5 +1,5 @@
 import React from 'react';
-import '../styles/MySlider.css'
+import '../styles/MySlider.scss'
 import MySliderSlide from "./MySliderSlide";
 
 const MySlider = ({data, activeSlide, ANIMATION_DURATION}) => {
