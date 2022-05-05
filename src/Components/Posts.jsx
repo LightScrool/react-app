@@ -5,7 +5,7 @@ import Post from "./Post";
 import {CSSTransition, TransitionGroup} from "react-transition-group";
 
 const Posts = ({posts, setPosts, currentPage}) => {
-    let postIndex = 0;
+    let localPostIndex = 0;
 
     return (<ul className="Posts">
         {
@@ -15,12 +15,12 @@ const Posts = ({posts, setPosts, currentPage}) => {
             {
                 posts.map(post => {
                     // TODO: Solution without findDOMNode
-                    postIndex++;
+                    localPostIndex++;
                     return (
                         <CSSTransition key={post.id} timeout={500} classNames="post">
                             <Post
                                 post={post}
-                                postIndex={postIndex + (currentPage-1)*MAX_POSTS_PER_PAGE}
+                                postIndex={localPostIndex + (currentPage-1)*MAX_POSTS_PER_PAGE}
                                 posts={posts}
                                 setPosts={setPosts}
                             />
