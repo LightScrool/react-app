@@ -1,5 +1,5 @@
 import React, {useRef} from 'react';
-import classes from "./PopUp.module.css";
+import classes from "./PopUp.module.scss";
 import {Transition} from "react-transition-group";
 
 const PopUp = React.forwardRef(({children, className, visible, setVisible, ...props}, ref) => {
