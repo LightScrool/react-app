@@ -53,5 +53,5 @@
 
 .PopUp__CloseButton:hover{
     transform: rotate(90deg);
-    color: palegreen;
+    color: #f38181;
 }
