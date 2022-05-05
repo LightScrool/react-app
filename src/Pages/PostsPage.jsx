@@ -50,7 +50,7 @@ function PostsPage() {
 
     // Rendering
     return (
-        <div className="App">
+        <div className="PostsPage">
                 <Container>
                     <PostManager
                         posts={posts}
