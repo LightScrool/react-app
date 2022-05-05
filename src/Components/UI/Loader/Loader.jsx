@@ -5,7 +5,7 @@ const Loader = React.forwardRef(({className, ...props}, ref) => {
     return (
         <div
             ref={ref}
-            className={classes.Loader + (` ${className}` ?? '')}
+            className={classes.Loader + (className ? ` ${className}` : '')}
             {...props}
         />
     );

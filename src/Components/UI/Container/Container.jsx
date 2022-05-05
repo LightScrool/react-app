@@ -5,7 +5,7 @@ const Container = React.forwardRef(({children, className, ...props}, ref) => {
     return (
         <div
             ref={ref}
-            className={classes.Container + (` ${className}` ?? '')}
+            className={classes.Container + (className ? ` ${className}` : '')}
             {...props}
         >
             {children}

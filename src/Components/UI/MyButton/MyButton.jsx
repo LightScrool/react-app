@@ -5,7 +5,7 @@ const MyButton = React.forwardRef(({children, className, ...props}, ref) => {
     return(
         <button
             ref={ref}
-            className={classes.MyButton + (` ${className}` ?? '')}
+            className={classes.MyButton + (className ? ` ${className}` : '')}
             {...props}
         >
             {children}

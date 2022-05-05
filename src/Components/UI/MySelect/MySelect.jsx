@@ -5,7 +5,7 @@ const MySelect = React.forwardRef(({data, title, className, ...props}, ref) => {
     return (
         <select
             ref={ref}
-            className={classes.MySelect + (` ${className}` ?? '')}
+            className={classes.MySelect + (className ? ` ${className}` : '')}
             defaultValue={title}
             {...props}
         >

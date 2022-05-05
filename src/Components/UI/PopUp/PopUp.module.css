@@ -11,12 +11,8 @@
     align-items: center;
 
     background-color: rgba(0, 0, 0, 0.2);
-    transition: all .3s;
-}
 
-.PopUp._inactive {
-    background-color: transparent;
-    z-index: 1;
+    transition: all .3s;
 }
 
 .PopUp__Content{
@@ -30,11 +26,6 @@
     border-radius: 20px;
 
     transition: all .3s;
-}
-
-.PopUp__Content._inactive {
-    transform: scale(0);
-    z-index: 1;
 }
 
 .PopUp__CloseButton{

@@ -6,7 +6,7 @@ const MyInput = React.forwardRef(({children, className, ...props}, ref) => {
         <input
             type='text'
             ref={ref}
-            className={classes.MyInput + (` ${className}` ?? '')}
+            className={classes.MyInput + (className ? ` ${className}` : '')}
             {...props}
         >
             {children}

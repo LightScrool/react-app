@@ -17,7 +17,7 @@ const ImageInsideSvg = React.forwardRef(({
         <svg
             ref={ref}
             viewBox={viewBox}
-            className={_class + (` ${className}` ?? '')}
+            className={_class + (className ? ` ${className}` : '')}
         >
             <mask id={maskId}>{maskSVG}</mask>
 
