@@ -1,5 +1,5 @@
 import React from 'react';
-import {MAX_POSTS_PER_PAGE} from '../data';
+import {MAX_POSTS_PER_PAGE} from '../store/data';
 import '../styles/Posts.scss';
 import Post from "./Post";
 import {TransitionGroup} from "react-transition-group";

@@ -1,5 +1,5 @@
 import React from 'react';
-import {MAX_POSTS_PER_PAGE} from '../data';
+import {MAX_POSTS_PER_PAGE} from '../store/data';
 import {getRange} from '../utils';
 import '../styles/PageList.scss'
 

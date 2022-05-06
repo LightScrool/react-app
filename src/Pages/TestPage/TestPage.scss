@@ -1,0 +1,18 @@
+.TestPage {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+
+    &__button{
+        margin: 0 5px 10px;
+    }
+
+    &__item{
+        padding: 10px;
+        background-color: lightcoral;
+        margin-bottom: 3px;
+        cursor: pointer;
+    }
+}
