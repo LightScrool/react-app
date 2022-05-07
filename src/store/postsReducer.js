@@ -13,6 +13,7 @@ const postsReducer = (state = defaultState, action) => {
             return [...state.filter(item => item.id !== action.payload)]
 
         case ADD_MANY_POSTS:
+            console.log(action.payload)
             return [...state, ...action.payload]
 
         default:
@@ -36,7 +37,7 @@ const deletePostAction = (id) => {
 
 const addManyPostsAction = (posts) => {
     return {
-        type: ADD_POST,
+        type: ADD_MANY_POSTS,
         payload: posts
     };
 }
