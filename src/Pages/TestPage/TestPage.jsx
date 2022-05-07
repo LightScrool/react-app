@@ -10,7 +10,7 @@ const TestPage = () => {
 
     const addPost = () => dispatch(addPostAction({
         id: Date.now(),
-        name: "Artem"
+        title: "Artem"
     }))
 
     const deletePost = (id) => dispatch(deletePostAction(id))
@@ -18,7 +18,6 @@ const TestPage = () => {
     return (
         <div className="TestPage">
             <MyButton onClick={addPost} className="TestPage__button">Add</MyButton>
-            <MyButton onClick={deletePost} className="TestPage__button">Remove</MyButton>
             <MyButton className="TestPage__button">Load</MyButton>
             <p>Items:</p>
             {

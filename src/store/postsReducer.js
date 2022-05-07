@@ -34,4 +34,11 @@ const deletePostAction = (id) => {
     };
 }
 
-export {postsReducer, addPostAction, deletePostAction};
+const addManyPostsAction = (posts) => {
+    return {
+        type: ADD_POST,
+        payload: posts
+    };
+}
+
+export {postsReducer, addPostAction, deletePostAction, addManyPostsAction};
