@@ -13,8 +13,7 @@ const postsReducer = (state = defaultState, action) => {
             return [...state.filter(item => item.id !== action.payload)]
 
         case ADD_MANY_POSTS:
-            console.log(action.payload)
-            return [...state, ...action.payload]
+            return [...action.payload]
 
         default:
             return state
