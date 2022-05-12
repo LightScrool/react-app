@@ -3,7 +3,7 @@ import "./SinglePostPage.scss";
 import Container from "../../Components/UI/Container/Container";
 import {useParams} from "react-router-dom";
 import useFetching from "../../hooks/useFetching";
-import {fetchSinglePost, fetchPostComments} from "../../store/data";
+import {fetchSinglePost, fetchPostComments} from "../../store/noReduxData";
 import Loader from "../../Components/UI/Loader/Loader";
 import {getTitled} from "../../utils"
 import PostComments from "../../Components/PostComments";

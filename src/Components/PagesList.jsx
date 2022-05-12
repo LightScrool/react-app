@@ -1,9 +1,11 @@
 import React from 'react';
-import {MAX_POSTS_PER_PAGE} from '../store/data';
+import {MAX_POSTS_PER_PAGE} from '../store/noReduxData';
 import {getRange} from '../utils';
 import '../styles/PageList.scss'
+import {useSelector} from "react-redux";
 
-const PageList = ({totalPostCount, currentPage, setCurrentPage}) => {
+const PagesList = ({currentPage, setCurrentPage}) => {
+    const totalPostCount = useSelector(state => state.posts.length);
     const pageCount = Math.ceil(totalPostCount / MAX_POSTS_PER_PAGE);
 
     // Too few elements, block is not needed
@@ -43,4 +45,4 @@ const PageList = ({totalPostCount, currentPage, setCurrentPage}) => {
     )
 };
 
-export default PageList;
+export default PagesList;

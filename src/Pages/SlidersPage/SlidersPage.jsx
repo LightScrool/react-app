@@ -2,7 +2,7 @@ import React, {useState} from 'react';
 import "./SlidersPage.scss"
 import Container from "../../Components/UI/Container/Container";
 import MySliderDots from "../../Components/MySlider/js/MySliderDots";
-import {MySliderData} from '../../store/data';
+import {MySliderData} from '../../store/noReduxData';
 import MySlider from "../../Components/MySlider/js/MySlider";
 
 const SlidersPage = () => {

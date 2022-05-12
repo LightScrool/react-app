@@ -3,7 +3,7 @@ import "./TestPage.scss"
 import {useDispatch, useSelector} from "react-redux";
 import MyButton from "../../Components/UI/MyButton/MyButton";
 import {addPostAction, deletePostAction} from "../../store/postsReducer";
-import {fetchPosts} from "../../asyncActions/posts";
+import {fetchPosts} from "../../store/asyncActions/posts";
 import useLoading from "../../hooks/useLoading";
 import Loader from "../../Components/UI/Loader/Loader";
 
