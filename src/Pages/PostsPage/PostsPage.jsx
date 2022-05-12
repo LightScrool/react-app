@@ -1,5 +1,5 @@
 import './PostsPage.scss';
-import {useEffect, useState} from "react";
+import {useEffect, useMemo, useState} from "react";
 import Posts from "../../Components/Posts";
 import Container from "../../Components/UI/Container/Container";
 import PostManager from "../../Components/PostManager";
@@ -14,73 +14,72 @@ import {setPostsAction, deleteAllPostsAction} from "../../store/postsReducer";
 function PostsPage() {
     // States
     const [searchQuery, setSearchQuery] = useState("");
+    const [sortField, setSortField] = useState("");
     const [currentPage, setCurrentPage] = useState(1);
 
     // Redux
+    const dispatch = useDispatch();
     const posts = useSelector(state => state.posts);
     const setPosts = (posts) => {
         dispatch(setPostsAction(posts))
     }
 
     // Data reading
-    const dispatch = useDispatch();
     const [postsFetching, postsAreLoading] = useLoading(() => dispatch(fetchPosts()));
 
     useEffect(() => {
-        postsFetching();
+        postsFetching()
 
         return () => {
             dispatch(deleteAllPostsAction());
         }
     }, [])
 
-
-    // Posts sorting
-    const sortPosts = (_sortField) => {
-        console.log("SORT")
-        if (!_sortField || !posts) return;
-
-        const sortedPosts = posts.sort((a, b) => a[_sortField].localeCompare(b[_sortField]));
-        setPosts([...sortedPosts]);
-    }
-
     // Posts search
-    const getQueryPosts = () => {
+    const filteredPosts = useMemo(() => {
         console.log("FILTER")
+        if (!searchQuery) return [...posts];
+
         return [...posts].filter(post => {
             for (let key in post) {
-                if (!searchQuery || post[key].toString().toLowerCase().includes(searchQuery.toLowerCase())) {
+                if (post[key].toString().toLowerCase().includes(searchQuery.toLowerCase())) {
                     return true;
                 }
             }
             return false;
         });
-    }
+    }, [posts, searchQuery])
+
+    // Posts sorting
+    const sortedFilteredPosts = useMemo(() => {
+        console.log("SORT")
+        if (!sortField) return filteredPosts;
+
+        return [...filteredPosts].sort((a, b) => a[sortField].localeCompare(b[sortField]));
+    }, [filteredPosts, sortField])
 
     // Rendering
     return (
         <div className="PostsPage">
-                <Container>
-                    <PostManager
-                        posts={posts}
-                        setPosts={setPosts}
-                        sortPosts={sortPosts}
-                        setSearchQuery={setSearchQuery}
-                    />
-                    <PagesList
-                        currentPage={currentPage}
-                        setCurrentPage={setCurrentPage}
-                    />
-                    {
-                        postsAreLoading
+            <Container>
+                <PostManager
+                    setSortField={setSortField}
+                    setSearchQuery={setSearchQuery}
+                />
+                <PagesList
+                    currentPage={currentPage}
+                    setCurrentPage={setCurrentPage}
+                />
+                {
+                    postsAreLoading
                         ?
                         <div style={{display: 'flex', justifyContent: 'center', marginTop: '230px'}}>
                             <Loader/>
                         </div>
                         :
-                        <Posts posts={getQueryPosts()} setPosts={setPosts} currentPage={currentPage}/>
-                    }
-                </Container>
+                        <Posts posts={sortedFilteredPosts} setPosts={setPosts} currentPage={currentPage}/>
+                }
+            </Container>
         </div>
     );
 }

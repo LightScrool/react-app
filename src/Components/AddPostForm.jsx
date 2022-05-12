@@ -2,8 +2,12 @@ import React, {useState} from 'react';
 import '../styles/AddPostForm.scss';
 import MyInput from "./UI/MyInput/MyInput";
 import MyButton from "./UI/MyButton/MyButton";
+import {useDispatch, useSelector} from "react-redux";
+import {addPostAction} from "../store/postsReducer";
 
-const AddPostForm = ({posts, setPosts}) => {
+const AddPostForm = () => {
+    const posts = useSelector(state => state.posts);
+    const dispatch = useDispatch();
     const [postTitle, setPostTitle] = useState('');
     const [postBody, setPostBody] = useState('');
 
@@ -16,11 +20,12 @@ const AddPostForm = ({posts, setPosts}) => {
             postId++;
         }
 
-        setPosts([...posts, {
+        const post = {
             id: postId,
             title: postTitle,
             body: postBody
-        }])
+        }
+        dispatch(addPostAction(post));
 
         setPostBody('');
         setPostTitle('');

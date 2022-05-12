@@ -4,7 +4,7 @@ import '../styles/Posts.scss';
 import Post from "./Post";
 import {TransitionGroup} from "react-transition-group";
 
-const Posts = ({posts, setPosts, currentPage}) => {
+const Posts = ({posts, currentPage}) => {
     let localPostIndex = 0;
 
     return (<ul className="Posts">
@@ -23,8 +23,6 @@ const Posts = ({posts, setPosts, currentPage}) => {
                             key={post.id}
                             post={post}
                             postIndex={localPostIndex + (currentPage-1)*MAX_POSTS_PER_PAGE}
-                            posts={posts}
-                            setPosts={setPosts}
                         />
                     )
                 })

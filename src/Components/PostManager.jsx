@@ -6,7 +6,7 @@ import MyInput from "./UI/MyInput/MyInput";
 import PopUp from "./UI/PopUp/PopUp";
 import AddPostForm from "./AddPostForm";
 
-const PostManager = ({posts, setPosts ,setSearchQuery, sortPosts}) => {
+const PostManager = ({setSearchQuery, setSortField}) => {
     const sortFields = {
         title: 'По названию',
         body: 'По тексту',
@@ -23,12 +23,12 @@ const PostManager = ({posts, setPosts ,setSearchQuery, sortPosts}) => {
     return (
         <div className="PostManager">
             <PopUp visible={popupVisible} setVisible={setPopupVisible}>
-                <AddPostForm posts={posts} setPosts={setPosts}/>
+                <AddPostForm/>
             </PopUp>
             <MySelect
                 title="Сортировать по..."
                 data={sortFields}
-                onChange={event => sortPosts(event.target.value)}
+                onChange={event => setSortField(event.target.value)}
             />
             <MyInput
                 className='PostManager__search'
