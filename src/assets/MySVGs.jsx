@@ -1,10 +1,10 @@
 import React from 'react';
 
-const MySVGs = ({id, fill, stroke}) => {
+const MySVGs = React.forwardRef(({id, fill, stroke, ...props}, ref) => {
     switch (id) {
         case "yinYang":
             return (
-                <svg viewBox="0 0 1280 1280" width="100%">
+                <svg viewBox="0 0 1280 1280" width="100%" ref={ref} {...props}>
                     <g
                         fill={fill ?? "none"}
                         stroke={stroke ?? "none"}
@@ -37,6 +37,6 @@ const MySVGs = ({id, fill, stroke}) => {
         default:
             return <></>
     }
-};
+});
 
 export default MySVGs;
