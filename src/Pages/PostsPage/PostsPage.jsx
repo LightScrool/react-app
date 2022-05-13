@@ -18,6 +18,13 @@ function PostsPage() {
     const [sortField, setSortField] = useState("");
     const [currentPage, setCurrentPage] = useState(1);
 
+    // This part (postsAreLoading & changePostsAreLoading) is kind of crutch:
+    // It is bad to use useLoading on fetchPostsAsyncAction, because then postsAreLoading
+    // will change to false immediately after fetching, but not after processing posts
+    // with filteredPosts, sortedFilteredPosts and postsToShowOnPage
+    const [postsAreLoading, setPostsAreLoading] = useState(true);
+    const [changePostsAreLoading, setChangePostsAreLoading] = useState(false);
+
     // Redux
     const dispatch = useDispatch();
     const posts = useSelector(state => state.posts);
@@ -26,10 +33,9 @@ function PostsPage() {
     }
 
     // Data reading
-    const [postsFetching, postsAreLoading] = useLoading(() => dispatch(fetchPostsAsyncAction()));
-
     useEffect(() => {
-        postsFetching()
+        dispatch(fetchPostsAsyncAction())
+            .then(setChangePostsAreLoading(true));
 
         return () => {
             dispatch(deleteAllPostsAction());
@@ -72,6 +78,12 @@ function PostsPage() {
         ) {
             posts.push(sortedFilteredPosts[i]);
         }
+
+        if (changePostsAreLoading){
+            setChangePostsAreLoading(false);
+            setPostsAreLoading(false);
+        }
+
         return posts;
     }, [sortedFilteredPosts, currentPage])
 
