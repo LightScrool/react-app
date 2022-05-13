@@ -5,10 +5,9 @@ import Container from "../../Components/UI/Container/Container";
 import PostManager from "../../Components/PostManager";
 import Loader from "../../Components/UI/Loader/Loader";
 import PagesList from "../../Components/PagesList";
-import useLoading from "../../hooks/useLoading";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchPostsAsyncAction} from "../../store/asyncActions/posts";
-import {setPostsAction, deleteAllPostsAction} from "../../store/postsReducer";
+import {setPostsAction, deleteAllPostsAction, postsReducer} from "../../store/postsReducer";
 import {MAX_POSTS_PER_PAGE} from "../../store/noReduxData";
 
 
@@ -27,7 +26,7 @@ function PostsPage() {
 
     // Redux
     const dispatch = useDispatch();
-    const posts = useSelector(state => state.posts);
+    const posts = useSelector(state => state.postsReducer.posts);
     const setPosts = (posts) => {
         dispatch(setPostsAction(posts))
     }

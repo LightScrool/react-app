@@ -1,4 +1,6 @@
-const defaultState = [];
+const defaultState = {
+    posts: []
+};
 const ADD_POST = "ADD_POST";
 const DELETE_POST = "DELETE_POST";
 const SET_POSTS = "SET_POSTS";
@@ -8,13 +10,13 @@ const DELETE_ALL_POSTS = "DELETE_ALL_POSTS";
 const postsReducer = (state = defaultState, action) => {
     switch (action.type) {
         case ADD_POST:
-            return [...state, action.payload]
+            return {...state, posts: [...state.posts, action.payload]}
 
         case DELETE_POST:
-            return [...state.filter(item => item.id !== action.payload)]
+            return {...state, posts: [...state.posts.filter(item => item.id !== action.payload)]}
 
         case SET_POSTS:
-            return [...action.payload]
+            return {...state, posts: [...action.payload]}
 
         case DELETE_ALL_POSTS:
             return defaultState

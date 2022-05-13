@@ -6,7 +6,7 @@ import {useDispatch, useSelector} from "react-redux";
 import {addPostAction} from "../store/postsReducer";
 
 const AddPostForm = () => {
-    const posts = useSelector(state => state.posts);
+    const posts = useSelector(state => state.postsReducer.posts);
     const dispatch = useDispatch();
     const [postTitle, setPostTitle] = useState('');
     const [postBody, setPostBody] = useState('');
