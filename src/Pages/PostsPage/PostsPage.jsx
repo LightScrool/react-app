@@ -8,10 +8,8 @@ import PagesList from "../../Components/PagesList";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchPostsAsyncAction} from "../../store/asyncActions/posts";
 import {
-    setPostsAction,
     deleteAllPostsAction,
-    setSearchQueryAction,
-    setSortFieldAction, setCurrentPageAction
+    setCurrentPageAction
 } from "../../store/postsReducer";
 import {MAX_POSTS_PER_PAGE} from "../../store/noReduxData";
 
@@ -32,15 +30,6 @@ function PostsPage() {
     const sortField = useSelector(state => state.postsReducer.sortField)
     const currentPage = useSelector(state => state.postsReducer.currentPage)
 
-    const setPosts = (posts) => {
-        dispatch(setPostsAction(posts))
-    }
-    const setSearchQuery = (searchQuery) => {
-        dispatch(setSearchQueryAction(searchQuery))
-    }
-    const setSortField = (sortField) => {
-        dispatch(setSortFieldAction(sortField))
-    }
     const setCurrentPage = (currentPage) => {
         dispatch(setCurrentPageAction(currentPage))
     }
@@ -104,24 +93,17 @@ function PostsPage() {
     return (
         <div className="PostsPage">
             <Container>
-                <PostManager
-                    setSortField={setSortField}
-                    setSearchQuery={setSearchQuery}
-                />
+                <PostManager/>
                 {
                     postsAreLoading
                         ?
-                        <div style={{display: 'flex', justifyContent: 'center', marginTop: '230px'}}>
+                        <div style={{display: 'flex', justifyContent: 'center', marginTop: '300px'}}>
                             <Loader/>
                         </div>
                         :
                         <>
-                            <PagesList
-                                pagesQuantity={pagesQuantity}
-                                currentPage={currentPage}
-                                setCurrentPage={setCurrentPage}
-                            />
-                            <Posts posts={postsToShowOnPage} setPosts={setPosts} currentPage={currentPage}/>
+                            <PagesList pagesQuantity={pagesQuantity}/>
+                            <Posts posts={postsToShowOnPage}/>
                         </>
                 }
             </Container>

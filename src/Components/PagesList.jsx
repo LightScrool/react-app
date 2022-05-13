@@ -1,12 +1,21 @@
 import React from 'react';
 import {getRange} from '../utils';
 import '../styles/PageList.scss'
+import {useDispatch, useSelector} from "react-redux";
+import {setCurrentPageAction} from "../store/postsReducer";
 
-const PagesList = ({currentPage, setCurrentPage, pagesQuantity}) => {
-    // Too few elements, block is not needed
-    if (pagesQuantity < 2) return (<></>);
+const PagesList = ({pagesQuantity}) => {
+    const dispatch = useDispatch();
+    const currentPage = useSelector(state => state.postsReducer.currentPage);
+    const setCurrentPage = (currentPage) => {
+        dispatch(setCurrentPageAction(currentPage))
+    }
 
     return (
+        pagesQuantity < 2 // Too few elements, block is not needed
+        ?
+        <></>
+        :
         <ul className="PageList">
             {/* Decrement button*/}
             <li

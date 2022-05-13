@@ -3,8 +3,10 @@ import {MAX_POSTS_PER_PAGE} from '../store/noReduxData';
 import '../styles/Posts.scss';
 import Post from "./Post";
 import {TransitionGroup} from "react-transition-group";
+import {useSelector} from "react-redux";
 
-const Posts = ({posts, currentPage}) => {
+const Posts = ({posts}) => {
+    const currentPage = useSelector(state => state.postsReducer.currentPage)
     let localPostIndex = 0;
 
     return (<ul className="Posts">

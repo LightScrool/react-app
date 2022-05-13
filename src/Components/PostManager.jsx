@@ -5,15 +5,24 @@ import MySelect from "./UI/MySelect/MySelect";
 import MyInput from "./UI/MyInput/MyInput";
 import PopUp from "./UI/PopUp/PopUp";
 import AddPostForm from "./AddPostForm";
+import {setSearchQueryAction, setSortFieldAction} from "../store/postsReducer";
+import {useDispatch} from "react-redux";
 
-const PostManager = ({setSearchQuery, setSortField}) => {
+const PostManager = () => {
     const sortFields = {
         title: 'По названию',
         body: 'По тексту',
     }
 
-
     const [popupVisible, setPopupVisible] = useState(false);
+
+    const dispatch = useDispatch();
+    const setSearchQuery = (searchQuery) => {
+        dispatch(setSearchQueryAction(searchQuery))
+    }
+    const setSortField = (sortField) => {
+        dispatch(setSortFieldAction(sortField))
+    }
 
     const OpenAddPostPopup = (event) => {
         event.preventDefault();
