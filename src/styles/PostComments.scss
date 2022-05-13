@@ -43,5 +43,9 @@
         color: #999;
 
         margin-top: 5px;
+
+        &:first-letter{
+            text-transform: uppercase;
+        }
     }
 }

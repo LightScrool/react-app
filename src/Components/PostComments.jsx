@@ -1,6 +1,5 @@
 import React from 'react';
 import "../styles/PostComments.scss";
-import {getTitled} from "../utils"
 
 const PostComments = ({comments}) => {
     return (
@@ -14,7 +13,7 @@ const PostComments = ({comments}) => {
                         </div>
                         <div className="PostComment__text">
                             Комментарий:
-                            <p>{getTitled(comment.body)}</p>
+                            <p>{comment.body}</p>
                         </div>
                     </li>
                 );

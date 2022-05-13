@@ -12,8 +12,4 @@ function getTitled(str){
     return str[0].toUpperCase() + str.slice(1);
 }
 
-function getElementTopOffset(element){
-    return element.current.getBoundingClientRect().top + window.pageYOffset;
-}
-
-export {getRange, getTitled, getElementTopOffset};
+export {getRange, getTitled};

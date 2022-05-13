@@ -5,7 +5,6 @@ import {useParams} from "react-router-dom";
 import useFetching from "../../hooks/useFetching";
 import {fetchSinglePost, fetchPostComments} from "../../store/noReduxData";
 import Loader from "../../Components/UI/Loader/Loader";
-import {getTitled} from "../../utils"
 import PostComments from "../../Components/PostComments";
 
 const SinglePostPage = () => {
@@ -52,8 +51,8 @@ const SinglePostPage = () => {
                         </h1>
                         :
                         <>
-                            <h1 className="SinglePostPage__title">{getTitled(postData.title)}</h1>
-                            <div className="SinglePostPage__text">{getTitled(postData.body)}</div>
+                            <h1 className="SinglePostPage__title">{postData.title}</h1>
+                            <div className="SinglePostPage__text">{postData.body}</div>
                             <PostComments comments={postComments}/>
                         </>
                     }
