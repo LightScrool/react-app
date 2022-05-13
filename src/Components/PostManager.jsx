@@ -6,7 +6,7 @@ import MyInput from "./UI/MyInput/MyInput";
 import PopUp from "./UI/PopUp/PopUp";
 import AddPostForm from "./AddPostForm";
 import {setSearchQueryAction, setSortFieldAction} from "../store/postsReducer";
-import {useDispatch} from "react-redux";
+import {useDispatch, useSelector} from "react-redux";
 
 const PostManager = () => {
     const sortFields = {
@@ -17,6 +17,8 @@ const PostManager = () => {
     const [popupVisible, setPopupVisible] = useState(false);
 
     const dispatch = useDispatch();
+    const searchQuery = useSelector(state => state.postsReducer.searchQuery)
+    const sortField = useSelector(state => state.postsReducer.sortField)
     const setSearchQuery = (searchQuery) => {
         dispatch(setSearchQueryAction(searchQuery))
     }
@@ -37,11 +39,13 @@ const PostManager = () => {
             <MySelect
                 title="Сортировать по..."
                 data={sortFields}
+                value={sortField}
                 onChange={event => setSortField(event.target.value)}
             />
             <MyInput
                 className='PostManager__search'
                 placeholder='Поиск...'
+                value={searchQuery}
                 onChange={event => setSearchQuery(event.target.value)}
             />
             <MyButton onClick={OpenAddPostPopup}>+ Add post</MyButton>
