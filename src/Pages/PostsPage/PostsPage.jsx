@@ -7,7 +7,7 @@ import Loader from "../../Components/UI/Loader/Loader";
 import PagesList from "../../Components/PagesList";
 import useLoading from "../../hooks/useLoading";
 import {useDispatch, useSelector} from "react-redux";
-import {fetchPosts} from "../../store/asyncActions/posts";
+import {fetchPostsAsyncAction} from "../../store/asyncActions/posts";
 import {setPostsAction, deleteAllPostsAction} from "../../store/postsReducer";
 import {MAX_POSTS_PER_PAGE} from "../../store/noReduxData";
 
@@ -26,7 +26,7 @@ function PostsPage() {
     }
 
     // Data reading
-    const [postsFetching, postsAreLoading] = useLoading(() => dispatch(fetchPosts()));
+    const [postsFetching, postsAreLoading] = useLoading(() => dispatch(fetchPostsAsyncAction()));
 
     useEffect(() => {
         postsFetching()
@@ -38,7 +38,6 @@ function PostsPage() {
 
     // Posts search
     const filteredPosts = useMemo(() => {
-        console.log("FILTER")
         if (!searchQuery) return [...posts];
 
         return [...posts].filter(post => {
@@ -53,7 +52,6 @@ function PostsPage() {
 
     // Posts sorting
     const sortedFilteredPosts = useMemo(() => {
-        console.log("SORT")
         if (!sortField) return filteredPosts;
 
         return [...filteredPosts].sort((a, b) => a[sortField].localeCompare(b[sortField]));
