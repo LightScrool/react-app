@@ -7,16 +7,16 @@ import Loader from "../../Components/UI/Loader/Loader";
 import PagesList from "../../Components/PagesList";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchPostsAsyncAction} from "../../store/asyncActions/posts";
-import {setPostsAction, deleteAllPostsAction, postsReducer} from "../../store/postsReducer";
+import {
+    setPostsAction,
+    deleteAllPostsAction,
+    setSearchQueryAction,
+    setSortFieldAction, setCurrentPageAction
+} from "../../store/postsReducer";
 import {MAX_POSTS_PER_PAGE} from "../../store/noReduxData";
 
 
 function PostsPage() {
-    // States
-    const [searchQuery, setSearchQuery] = useState(""); // TODO: вынести стейты в редакс
-    const [sortField, setSortField] = useState("");
-    const [currentPage, setCurrentPage] = useState(1);
-
     // This part (postsAreLoading & changePostsAreLoading) is kind of crutch:
     // It is bad to use useLoading on fetchPostsAsyncAction, because then postsAreLoading
     // will change to false immediately after fetching, but not after processing posts
@@ -24,11 +24,25 @@ function PostsPage() {
     const [postsAreLoading, setPostsAreLoading] = useState(true);
     const [changePostsAreLoading, setChangePostsAreLoading] = useState(false);
 
-    // Redux
+    // States from Redux
     const dispatch = useDispatch();
+
     const posts = useSelector(state => state.postsReducer.posts);
+    const searchQuery = useSelector(state => state.postsReducer.searchQuery)
+    const sortField = useSelector(state => state.postsReducer.sortField)
+    const currentPage = useSelector(state => state.postsReducer.currentPage)
+
     const setPosts = (posts) => {
         dispatch(setPostsAction(posts))
+    }
+    const setSearchQuery = (searchQuery) => {
+        dispatch(setSearchQueryAction(searchQuery))
+    }
+    const setSortField = (sortField) => {
+        dispatch(setSortFieldAction(sortField))
+    }
+    const setCurrentPage = (currentPage) => {
+        dispatch(setCurrentPageAction(currentPage))
     }
 
     // Data reading
