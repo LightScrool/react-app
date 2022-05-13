@@ -9,11 +9,12 @@ import useLoading from "../../hooks/useLoading";
 import {useDispatch, useSelector} from "react-redux";
 import {fetchPosts} from "../../store/asyncActions/posts";
 import {setPostsAction, deleteAllPostsAction} from "../../store/postsReducer";
+import {MAX_POSTS_PER_PAGE} from "../../store/noReduxData";
 
 
 function PostsPage() {
     // States
-    const [searchQuery, setSearchQuery] = useState("");
+    const [searchQuery, setSearchQuery] = useState(""); // TODO: вынести стейты в редакс
     const [sortField, setSortField] = useState("");
     const [currentPage, setCurrentPage] = useState(1);
 
@@ -58,6 +59,24 @@ function PostsPage() {
         return [...filteredPosts].sort((a, b) => a[sortField].localeCompare(b[sortField]));
     }, [filteredPosts, sortField])
 
+    // Working with pages
+    const pagesQuantity = useMemo(() => {
+        return Math.ceil(sortedFilteredPosts.length / MAX_POSTS_PER_PAGE);
+    }, [sortedFilteredPosts])
+    useEffect(() => setCurrentPage(1), [pagesQuantity])
+
+    const postsToShowOnPage = useMemo(() => {
+        const posts = [];
+        for (
+            let i = (currentPage - 1) * MAX_POSTS_PER_PAGE;
+            i < currentPage * MAX_POSTS_PER_PAGE && i < sortedFilteredPosts.length;
+            i++
+        ) {
+            posts.push(sortedFilteredPosts[i]);
+        }
+        return posts;
+    }, [sortedFilteredPosts, currentPage])
+
     // Rendering
     return (
         <div className="PostsPage">
@@ -66,10 +85,6 @@ function PostsPage() {
                     setSortField={setSortField}
                     setSearchQuery={setSearchQuery}
                 />
-                <PagesList
-                    currentPage={currentPage}
-                    setCurrentPage={setCurrentPage}
-                />
                 {
                     postsAreLoading
                         ?
@@ -77,7 +92,14 @@ function PostsPage() {
                             <Loader/>
                         </div>
                         :
-                        <Posts posts={sortedFilteredPosts} setPosts={setPosts} currentPage={currentPage}/>
+                        <>
+                            <PagesList
+                                pagesQuantity={pagesQuantity}
+                                currentPage={currentPage}
+                                setCurrentPage={setCurrentPage}
+                            />
+                            <Posts posts={postsToShowOnPage} setPosts={setPosts} currentPage={currentPage}/>
+                        </>
                 }
             </Container>
         </div>

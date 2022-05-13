@@ -1,15 +1,10 @@
 import React from 'react';
-import {MAX_POSTS_PER_PAGE} from '../store/noReduxData';
 import {getRange} from '../utils';
 import '../styles/PageList.scss'
-import {useSelector} from "react-redux";
 
-const PagesList = ({currentPage, setCurrentPage}) => {
-    const totalPostCount = useSelector(state => state.posts.length);
-    const pageCount = Math.ceil(totalPostCount / MAX_POSTS_PER_PAGE);
-
+const PagesList = ({currentPage, setCurrentPage, pagesQuantity}) => {
     // Too few elements, block is not needed
-    if (pageCount < 2) return (<></>);
+    if (pagesQuantity < 2) return (<></>);
 
     return (
         <ul className="PageList">
@@ -22,7 +17,7 @@ const PagesList = ({currentPage, setCurrentPage}) => {
             </li>
 
             {/* Page buttons*/}
-            {getRange(1, pageCount).map(page => {
+            {getRange(1, pagesQuantity).map(page => {
                 return (
                     <li
                         key={page}
@@ -37,7 +32,7 @@ const PagesList = ({currentPage, setCurrentPage}) => {
             {/* Increment button*/}
             <li
                 className={"PageList__Button"}
-                onClick={() => setCurrentPage(currentPage === pageCount? pageCount : currentPage + 1)}
+                onClick={() => setCurrentPage(currentPage === pagesQuantity? pagesQuantity : currentPage + 1)}
             >
                 <i className="fa-solid fa-arrow-right"/>
             </li>
