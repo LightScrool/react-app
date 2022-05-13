@@ -5,7 +5,7 @@ const ADD_POST = "ADD_POST";
 const DELETE_POST = "DELETE_POST";
 const SET_POSTS = "SET_POSTS";
 const DELETE_ALL_POSTS = "DELETE_ALL_POSTS";
-
+const CLEAR_DATA = "CLEAR_DATA";
 
 const postsReducer = (state = defaultState, action) => {
     switch (action.type) {
@@ -19,6 +19,9 @@ const postsReducer = (state = defaultState, action) => {
             return {...state, posts: [...action.payload]}
 
         case DELETE_ALL_POSTS:
+            return {...state, posts: []}
+
+        case CLEAR_DATA:
             return defaultState
 
         default:
@@ -53,4 +56,10 @@ const deleteAllPostsAction = () => {
     }
 }
 
-export {postsReducer, addPostAction, deletePostAction, setPostsAction, deleteAllPostsAction};
+const clearDataAction = () => {
+    return {
+        type: CLEAR_DATA
+    }
+}
+
+export {postsReducer, addPostAction, deletePostAction, setPostsAction, deleteAllPostsAction, clearDataAction};
