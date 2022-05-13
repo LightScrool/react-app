@@ -15,6 +15,8 @@ import {MAX_POSTS_PER_PAGE} from "../../store/noReduxData";
 
 
 function PostsPage() {
+    // TODO: авторизация через гугл и режим админа
+
     // This part (postsAreLoading & changePostsAreLoading) is kind of crutch:
     // It is bad to use useLoading on fetchPostsAsyncAction, because then postsAreLoading
     // will change to false immediately after fetching, but not after processing posts

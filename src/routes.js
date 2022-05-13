@@ -5,7 +5,7 @@ import SlidersPage from "./Pages/SlidersPage/SlidersPage";
 import PageNotFound from "./Pages/PageNotFound/PageNotFound";
 import TestPage from "./Pages/TestPage/TestPage";
 
-const routes = [
+const ROUTES = [
     {path: "/", exact: true, element: <MainPage/>},
     {path: "/posts", exact: true, element: <PostsPage/>},
     {path: "/test", exact: true, element: <TestPage/>},
@@ -14,4 +14,10 @@ const routes = [
     {path: "*", exact: false, element: <PageNotFound/>}
 ];
 
-export default routes;
+const ROUTES_IN_NAVIGATION = [
+    {path: "/posts", name: "Posts"},
+    {path: "/sliders", name: "Sliders"},
+];
+
+export default ROUTES;
+export {ROUTES_IN_NAVIGATION}
