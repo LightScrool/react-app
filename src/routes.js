@@ -4,6 +4,7 @@ import SinglePostPage from "./Pages/SinglePostPage/SinglePostPage";
 import SlidersPage from "./Pages/SlidersPage/SlidersPage";
 import PageNotFound from "./Pages/PageNotFound/PageNotFound";
 import TestPage from "./Pages/TestPage/TestPage";
+import ScrollPage from "./Pages/ScrollPage/ScrollPage";
 
 const ROUTES = [
     {path: "/", exact: true, element: <MainPage/>},
@@ -11,12 +12,14 @@ const ROUTES = [
     {path: "/test", exact: true, element: <TestPage/>},
     {path: "/posts/:id", exact: true, element: <SinglePostPage/>},
     {path: "/sliders", exact: true, element: <SlidersPage/>},
+    {path: "/scroll", exact: true, element: <ScrollPage/>},
     {path: "*", exact: false, element: <PageNotFound/>}
 ];
 
 const ROUTES_IN_NAVIGATION = [
     {path: "/posts", name: "Posts"},
     {path: "/sliders", name: "Sliders"},
+    {path: "/scroll", name: "Scroll"},
 ];
 
 export default ROUTES;
