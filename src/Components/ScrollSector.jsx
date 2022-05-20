@@ -3,6 +3,7 @@ import "../styles/ScrollSector.scss"
 import Container from "./UI/Container/Container";
 import MySVGs from "../assets/MySVGs";
 import useScroll from "../hooks/useScroll";
+import {Transition} from "react-transition-group";
 
 const ScrollSector = () => {
     const SLIDE_TEXTS = [
@@ -12,6 +13,7 @@ const ScrollSector = () => {
         'Other sample text',
     ]
     const REVOLUTION_QUANTITY = 1.5;
+    const TIMEOUT = 1500;
 
     const animationBlock = useRef();
     const [startCoords, setStartCoords] = useState(0);
@@ -19,11 +21,11 @@ const ScrollSector = () => {
     const windowPos = useScroll();
 
     const animationPercent = useMemo(() => {
-        let percent = (window.scrollY - startCoords) / (endCoords - startCoords);
+        let percent = (windowPos - startCoords) / (endCoords - startCoords);
         if (percent < 0) percent = 0;
         if (percent > 1) percent = 1;
         return percent;
-    }, [windowPos]);
+    }, [windowPos, startCoords, endCoords]);
 
     const active = useMemo(() => animationPercent >= 0.5, [animationPercent])
 
@@ -49,20 +51,21 @@ const ScrollSector = () => {
                 <div className="ScrollSector__inner">
                     <div
                         className="ScrollSector__svg"
-                        style={{transform: `rotate(${REVOLUTION_QUANTITY*animationPercent*360}deg)`}}
+                        style={{transform: `rotate(${REVOLUTION_QUANTITY * animationPercent * 360}deg)`}}
                     >
                         <MySVGs id={"yinYang"} fill="#ffffff"/>
                     </div>
                     {
                         SLIDE_TEXTS.map((text, index) => {
-                            return(
-                                <div
-                                    key={index}
+                            return (
+                                <ScrollSectorText
+                                    key={'slide-text-' + (index)}
                                     id={'slide-text-' + (index)}
-                                    className={"ScrollSector__slide-text" + (active ? " _active" : "")}
-                                >
-                                    {text}
-                                </div>
+                                    text={text}
+                                    index={'slide-text-' + (index)}
+                                    isActive={active}
+                                    timeout={TIMEOUT}
+                                />
                             )
                         })
                     }
@@ -71,5 +74,34 @@ const ScrollSector = () => {
         </div>
     );
 };
+
+function ScrollSectorText({text, id, isActive, timeout}) {
+    const nodeRef = useRef();
+
+    return (
+        <Transition
+            nodeRef={nodeRef}
+            in={isActive}
+            timeout={{
+                enter: 0,
+                exit: timeout
+            }}
+            mountOnEnter
+            unmountOnExit
+        >
+            {
+                state => (
+                    <div
+                        ref={nodeRef}
+                        id={id}
+                        className={`ScrollSector__slide-text ${state}`}
+                    >
+                        {text}
+                    </div>
+                )
+            }
+        </Transition>
+    );
+}
 
 export default ScrollSector;

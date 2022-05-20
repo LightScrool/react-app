@@ -33,14 +33,16 @@
             margin-bottom: 10px;
         }
 
-        // animation
-        color: transparent;
-        transform: translateY(100px);
-        &:before{
-            transform: translate(-50%, -100px) scale(0);
+        // react-transition-group Transition styles
+        &.entering, &.exiting{
+            color: transparent;
+            transform: translateY(100px);
+            &:before{
+                transform: translate(-50%, -100px) scale(0);
+            }
         }
 
-        &._active{
+        &.entered{
             color: #999;
             transform: none;
             &:before{
