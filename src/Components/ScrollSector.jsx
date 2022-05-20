@@ -3,7 +3,7 @@ import "../styles/ScrollSector.scss"
 import Container from "./UI/Container/Container";
 import MySVGs from "../assets/MySVGs";
 import useScroll from "../hooks/useScroll";
-import {Transition} from "react-transition-group";
+import {Transition} from "react-transition-group"; // TODO: replace react-transition-group
 
 const ScrollSector = () => {
     const SLIDE_TEXTS = [

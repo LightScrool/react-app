@@ -1,13 +1,14 @@
 import {useEffect, useState} from "react";
 
 const useScroll = () => {
-    const [windowPos, setWindowPos] = useState(window.scrollY);
+    const [windowPos, setWindowPos] = useState(0);
 
     function OnWindowScroll() {
         setWindowPos(window.scrollY)
     }
 
     useEffect(() => {
+        OnWindowScroll();
         window.addEventListener("scroll", OnWindowScroll)
 
         return () => {
