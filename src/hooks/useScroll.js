@@ -1,6 +1,7 @@
 import {useEffect, useState} from "react";
 
 const useScroll = () => {
+    // TODO: don't use useState, it triggers rerendering
     const [windowPos, setWindowPos] = useState(0);
 
     function OnWindowScroll() {
