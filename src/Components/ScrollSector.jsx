@@ -1,68 +1,60 @@
-import React, {useEffect, useRef, useState} from 'react';
+import React, {useEffect, useMemo, useRef, useState} from 'react';
 import "../styles/ScrollSector.scss"
 import Container from "./UI/Container/Container";
 import MySVGs from "../assets/MySVGs";
+import useScroll from "../hooks/useScroll";
 
 const ScrollSector = () => {
-    const slideTexts = [
+    const SLIDE_TEXTS = [
         'That\'s sample text',
         'Consectetur adipisicing',
         'Lorem ipsum dolor',
         'Other sample text',
     ]
-    const block = useRef();
-    const blockToRound = useRef();
-    const [active, setActive] = useState(false);
-    let animationPercent, startCoords, endCoords;
+    const REVOLUTION_QUANTITY = 1.5;
 
-    const calculateAnimationZone = () => {
-        const box = block.current.getBoundingClientRect();
-        startCoords = box.top + window.pageYOffset;
-        endCoords = box.bottom + window.pageYOffset - window.innerHeight;
-    }
+    const animationBlock = useRef();
+    const [startCoords, setStartCoords] = useState(0);
+    const [endCoords, setEndCoords] = useState(0);
+    const windowPos = useScroll();
 
-    const calculateAnimationPercent = () => {
+    const animationPercent = useMemo(() => {
         let percent = (window.scrollY - startCoords) / (endCoords - startCoords);
         if (percent < 0) percent = 0;
         if (percent > 1) percent = 1;
-        animationPercent = percent;
-    }
+        return percent;
+    }, [windowPos]);
 
-    const onWindowScroll = () => {
-        calculateAnimationPercent();
-        const revolutionsQuantity = 1;
-        blockToRound.current.style.transform = `rotate(${revolutionsQuantity*animationPercent*360}deg)`;
-        if (animationPercent >= 0.5){
-            setActive(true)
-        } else {
-            setActive(false)
-        }
-    }
+    const active = useMemo(() => animationPercent >= 0.5, [animationPercent])
 
-    // ditMount
     useEffect(() => {
+        const calculateAnimationZone = () => {
+            const box = animationBlock.current.getBoundingClientRect();
+            setStartCoords(box.top + window.pageYOffset);
+            setEndCoords(box.bottom + window.pageYOffset - window.innerHeight);
+        }
+
         calculateAnimationZone();
 
-        window.addEventListener('scroll', onWindowScroll);
         window.addEventListener('resize', calculateAnimationZone);
 
         return () => {
-            window.removeEventListener('scroll', onWindowScroll)
             window.removeEventListener('resize', calculateAnimationZone);
         }
     }, [])
 
-
-
     return (
-        <div ref={block} className="ScrollSector">
+        <div ref={animationBlock} className="ScrollSector">
             <Container>
                 <div className="ScrollSector__inner">
-                    <div className="ScrollSector__svg" ref={blockToRound}>
+                    <div
+                        className="ScrollSector__svg"
+                        style={{transform: `rotate(${REVOLUTION_QUANTITY*animationPercent*360}deg)`}}
+                    >
                         <MySVGs id={"yinYang"} fill="#ffffff"/>
                     </div>
                     {
-                        slideTexts.map((text, index) => {
+                        SLIDE_TEXTS.map((text, index) => {
                             return(
                                 <div
                                     key={index}
