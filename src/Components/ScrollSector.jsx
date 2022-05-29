@@ -3,7 +3,8 @@ import "../styles/ScrollSector.scss"
 import Container from "./UI/Container/Container";
 import MySVGs from "../assets/MySVGs";
 import useScroll from "../hooks/useScroll";
-import {Transition} from "react-transition-group"; // TODO: replace react-transition-group
+import {Transition} from "react-transition-group";
+import ScrollSectorText from "./ScrollSectorText"; // TODO: replace react-transition-group
 
 const ScrollSector = () => {
     const SLIDE_TEXTS = [
@@ -74,34 +75,5 @@ const ScrollSector = () => {
         </div>
     );
 };
-
-function ScrollSectorText({text, id, isActive, timeout}) {
-    const nodeRef = useRef();
-
-    return (
-        <Transition
-            nodeRef={nodeRef}
-            in={isActive}
-            timeout={{
-                enter: 0,
-                exit: timeout
-            }}
-            mountOnEnter
-            unmountOnExit
-        >
-            {
-                state => (
-                    <div
-                        ref={nodeRef}
-                        id={id}
-                        className={`ScrollSector__slide-text ${state}`}
-                    >
-                        {text}
-                    </div>
-                )
-            }
-        </Transition>
-    );
-}
 
 export default ScrollSector;
