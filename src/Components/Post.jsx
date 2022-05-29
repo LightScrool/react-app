@@ -5,7 +5,7 @@ import {useLocation, useNavigate} from "react-router-dom";
 import {CSSTransition} from "react-transition-group";
 import {useDispatch} from "react-redux";
 import {deletePostAction} from "../store/postsReducer";
-import {getTitled} from "../utils";
+import {getTitled} from "../utils.ts";
 
 const Post = ({post, postIndex, ...CSSTransitionProps}) => {
     // CSSTransitionProps are hidden props, that TransitionGroup should

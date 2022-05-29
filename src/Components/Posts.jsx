@@ -1,5 +1,5 @@
 import React from 'react';
-import {MAX_POSTS_PER_PAGE} from '../store/noReduxData';
+import {MAX_POSTS_PER_PAGE} from '../store/noReduxData.ts';
 import '../styles/Posts.scss';
 import Post from "./Post";
 import {TransitionGroup} from "react-transition-group";

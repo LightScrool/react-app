@@ -1,13 +1,13 @@
-import React, {useState} from 'react';
+import {FC, useState} from 'react';
 import "./SlidersPage.scss"
 import Container from "../../Components/UI/Container/Container";
-import MySliderDots from "../../Components/MySlider/js/MySliderDots";
-import {MySliderData} from '../../store/noReduxData';
-import MySlider from "../../Components/MySlider/js/MySlider";
+import MySliderDots from "../../Components/MySlider/js/MySliderDots.tsx";
+import {MySliderData} from '../../store/noReduxData.ts';
+import MySlider from "../../Components/MySlider/js/MySlider.tsx";
 
-const SlidersPage = () => {
-    const [activeSlide, setActiveSlide] = useState(0); // Index of active slide
-    const ANIMATION_DURATION = 600;
+const SlidersPage: FC = () => {
+    const [activeSlide, setActiveSlide] = useState<number>(0); // Index of active slide
+    const ANIMATION_DURATION: number = 600;
 
     return (
         <div className="SlidersPage">

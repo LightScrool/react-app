@@ -1,6 +1,6 @@
 import React from 'react';
-import {getRange} from '../utils';
 import '../styles/PageList.scss'
+import {getRange} from '../utils.ts';
 import {useDispatch, useSelector} from "react-redux";
 import {setCurrentPageAction} from "../store/postsReducer";
 

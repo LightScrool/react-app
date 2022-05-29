@@ -1,8 +1,12 @@
-import React from 'react';
+import {FC} from 'react';
 import "../styles/AboutScroll.scss"
 import Container from "./UI/Container/Container";
 
-const AboutScroll = ({text}) => {
+interface AboutScrollProps {
+    text?: string
+}
+
+const AboutScroll: FC<AboutScrollProps> = ({text}) => {
     return (
         <div className="AboutScroll">
             <Container>

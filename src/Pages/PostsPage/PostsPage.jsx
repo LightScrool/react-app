@@ -11,7 +11,7 @@ import {
     deleteAllPostsAction,
     setCurrentPageAction
 } from "../../store/postsReducer";
-import {MAX_POSTS_PER_PAGE} from "../../store/noReduxData";
+import {MAX_POSTS_PER_PAGE} from "../../store/noReduxData.ts";
 
 
 function PostsPage() {

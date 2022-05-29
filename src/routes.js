@@ -1,10 +1,10 @@
 import MainPage from "./Pages/MainPage/MainPage";
 import PostsPage from "./Pages/PostsPage/PostsPage";
 import SinglePostPage from "./Pages/SinglePostPage/SinglePostPage";
-import SlidersPage from "./Pages/SlidersPage/SlidersPage";
+import SlidersPage from "./Pages/SlidersPage/SlidersPage.tsx";
 import PageNotFound from "./Pages/PageNotFound/PageNotFound";
 import TestPage from "./Pages/TestPage/TestPage";
-import ScrollPage from "./Pages/ScrollPage/ScrollPage";
+import ScrollPage from "./Pages/ScrollPage/ScrollPage.tsx";
 
 const ROUTES = [
     {path: "/", exact: true, element: <MainPage/>},
