@@ -10,7 +10,7 @@ const ScrollSectorText = ({text, id, isActive, timeout}) => {
             nodeRef={nodeRef}
             in={isActive}
             timeout={{
-                enter: 10,
+                enter: 20,
                 exit: timeout
             }}
             mountOnEnter

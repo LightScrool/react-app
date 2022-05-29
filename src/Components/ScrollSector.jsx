@@ -3,7 +3,6 @@ import "../styles/ScrollSector.scss"
 import Container from "./UI/Container/Container";
 import MySVGs from "../assets/MySVGs";
 import useScroll from "../hooks/useScroll";
-import {Transition} from "react-transition-group";
 import ScrollSectorText from "./ScrollSectorText"; // TODO: replace react-transition-group
 
 const ScrollSector = () => {
