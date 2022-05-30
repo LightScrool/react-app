@@ -1,0 +1,137 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ChangeListManager">
+    <list default="true" id="db4e264e-c765-49d5-b98d-a32aa79d72f9" name="Changes" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/codeStyles/codeStyleConfig.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/jsLibraryMappings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/react-app.iml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/react-app.iml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/README.md" beforeDir="false" afterPath="$PROJECT_DIR$/README.md" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/public/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/js/fontawesome.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/public/noscript-styles.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/App.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/AboutScroll.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/AddPostForm.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Footer.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Header.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Logo.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/MyPhoto.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/MySlider/js/MySlider.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/MySlider/js/MySliderDot.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/MySlider/js/MySliderDots.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/MySlider/js/MySliderSlide.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/MySlider/styles/MySlider.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/MySlider/styles/MySliderDot.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/MySlider/styles/MySliderDots.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/MySlider/styles/MySliderSlide.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Navigation.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/PagesList.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Post.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/PostComments.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/PostManager.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/Posts.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/ScrollSector.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/ScrollSectorText.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/UI/Container/Container.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/UI/Container/Container.module.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/UI/ImageInsideSVG/ImageInsideSVG.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/UI/ImageInsideSVG/ImageInsideSVG.module.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/UI/Loader/Loader.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/UI/Loader/Loader.module.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/UI/MyButton/MyButton.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/UI/MyButton/MyButton.module.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/UI/MyInput/MyInput.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/UI/MyInput/MyInput.module.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/UI/MySelect/MySelect.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/UI/MySelect/MySelect.module.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/UI/PopUp/PopUp.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Components/UI/PopUp/PopUp.module.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/MainPage/MainPage.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/MainPage/MainPage.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/PageNotFound/PageNotFound.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/PageNotFound/PageNotFound.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/PostsPage/PostsPage.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/PostsPage/PostsPage.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/ScrollPage/ScrollPage.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/ScrollPage/ScrollPage.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/SinglePostPage/SinglePostPage.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/SinglePostPage/SinglePostPage.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/SlidersPage/SlidersPage.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/SlidersPage/SlidersPage.tsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/TestPage/TestPage.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/Pages/TestPage/TestPage.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/MySVGs.jsx" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/SlidersPage-background.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/assets/images/my-photo.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useFetching.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useLoading.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useScroll.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/index.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/routes.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/asyncActions/posts.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/index.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/noReduxData.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/store/postsReducer.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/AboutScroll.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/AddPostForm.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/Footer.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/Header.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/Logo.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/Navigation.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/PageList.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/Post.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/PostComments.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/PostManager.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/Posts.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/ScrollSector.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/ScrollSectorText.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/index.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/types.ts" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/utils.ts" beforeDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="MarkdownSettingsMigration">
+    <option name="stateVersion" value="1" />
+  </component>
+  <component name="ProjectId" id="29sSJ6SZgCDZ5JpglSOMhWE3tLR" />
+  <component name="ProjectLevelVcsManager" settingsEditedManually="true" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
+    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
+    <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="node.js.detected.package.eslint" value="true" />
+    <property name="node.js.selected.package.eslint" value="(autodetect)" />
+    <property name="nodejs_package_manager_path" value="npm" />
+    <property name="vue.rearranger.settings.migration" value="true" />
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="db4e264e-c765-49d5-b98d-a32aa79d72f9" name="Changes" comment="" />
+      <created>1653900233789</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1653900233789</updated>
+      <workItem from="1653900250375" duration="299000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>
