@@ -1,0 +1,51 @@
+.PostComments{
+    margin-top: 40px;
+
+    &__title{
+        font-family: 'Montserrat', sans-serif;
+        font-weight: 700;
+        font-size: 30px;
+        line-height: 0.95;
+        color: #333;
+
+        margin-bottom: 20px;
+    }
+}
+
+
+.PostComment{
+    margin: 15px 0;
+    padding: 10px;
+
+    border-bottom: 1px solid #999;
+
+    &:last-child{
+        border: 0;
+    }
+
+    &__e-mail{
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+        color: #333;
+    }
+
+    &__text{
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+        color: #333;
+
+        margin-top: 5px;
+    }
+
+    &__text p{
+        font-family: 'Roboto', sans-serif;
+        font-size: 18px;
+        color: #999;
+
+        margin-top: 5px;
+
+        &:first-letter{
+            text-transform: uppercase;
+        }
+    }
+}

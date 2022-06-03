@@ -2,16 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db4e264e-c765-49d5-b98d-a32aa79d72f9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/routes.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/asyncActions/posts.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/index.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/noReduxData.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/store/postsReducer.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/types.ts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/utils.ts" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/App.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/App.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/App.scss" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/styles/index.scss" beforeDir="false" afterPath="$PROJECT_DIR$/src/styles/index.scss" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -74,7 +68,7 @@
       <workItem from="1653903906607" duration="1185000" />
       <workItem from="1653924322779" duration="6267000" />
       <workItem from="1653990505734" duration="6163000" />
-      <workItem from="1654269537388" duration="2314000" />
+      <workItem from="1654269537388" duration="2801000" />
     </task>
     <servers />
   </component>

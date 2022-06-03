@@ -1,0 +1,19 @@
+.Header{
+    z-index: 200;
+
+    position: fixed;
+    top: 0;
+    width: 100%;
+
+    background-color: #fff;
+    border-bottom: 2px solid #f38181;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.15);
+
+    &__inner{
+        height: 90px;
+
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+}

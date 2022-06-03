@@ -1,0 +1,13 @@
+.Logo {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 30px;
+    color: #333;
+    text-decoration: none;
+
+    transition: color .2s linear;
+
+    &:hover {
+        color: #f38181;
+    }
+}
