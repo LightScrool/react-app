@@ -16,7 +16,7 @@ const MyInput = React.forwardRef<HTMLInputElement, UIProps>((
             className={classes.MyInput + (className ? ` ${className}` : '')}
             {...props}
         >
-            {children}
+            {children ?? <></>}
         </input>
     );
 });

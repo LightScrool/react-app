@@ -2,16 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db4e264e-c765-49d5-b98d-a32aa79d72f9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/custom.d.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package-lock.json" beforeDir="false" afterPath="$PROJECT_DIR$/package-lock.json" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/package.json" beforeDir="false" afterPath="$PROJECT_DIR$/package.json" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/MyButton/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/MyButton/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/UI/MyInput/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/MyInput/index.tsx" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/components/UI/PopUp/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/PopUp/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/noReduxData.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/noReduxData.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/store/postsReducer.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/store/postsReducer.ts" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/index.d.ts" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/types/projectTypes.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/types.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -79,7 +72,7 @@
       <workItem from="1653990505734" duration="6163000" />
       <workItem from="1654269537388" duration="5387000" />
       <workItem from="1654326652979" duration="4864000" />
-      <workItem from="1654331577968" duration="377000" />
+      <workItem from="1654331577968" duration="806000" />
     </task>
     <servers />
   </component>

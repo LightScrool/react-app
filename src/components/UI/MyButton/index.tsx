@@ -16,7 +16,7 @@ const MyButton = React.forwardRef<HTMLButtonElement, UIProps>((
             className={classes.MyButton + (className ? ` ${className}` : '')}
             {...props}
         >
-            {children}
+            {children ?? <></>}
         </button>
     );
 });

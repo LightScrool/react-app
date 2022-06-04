@@ -56,7 +56,7 @@ const PopUp = React.forwardRef<HTMLDivElement, PopUpProps>((
                                 aria-hidden="true"
                                 onClick={() => setVisible(false)}
                             />
-                            {children}
+                            {children ?? <></>}
                         </div>
                     </div>
                 )
