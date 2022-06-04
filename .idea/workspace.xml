@@ -2,9 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db4e264e-c765-49d5-b98d-a32aa79d72f9" name="Changes" comment="">
-      <change beforePath="$PROJECT_DIR$/src/components/UI/MyButton/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/MyButton/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/MyInput/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/MyInput/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/UI/PopUp/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/UI/PopUp/index.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hooks/useLoading.ts" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/hooks/useScroll.ts" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,8 +14,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript File" />
         <option value="TypeScript JSX File" />
+        <option value="TypeScript File" />
       </list>
     </option>
   </component>
@@ -39,6 +39,7 @@
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
+    <property name="settings.editor.selected.configurable" value="terminal" />
     <property name="ts.external.directory.path" value="D:\Programming\Web\react-app\node_modules\typescript\lib" />
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
@@ -72,7 +73,9 @@
       <workItem from="1653990505734" duration="6163000" />
       <workItem from="1654269537388" duration="5387000" />
       <workItem from="1654326652979" duration="4864000" />
-      <workItem from="1654331577968" duration="806000" />
+      <workItem from="1654331577968" duration="4566000" />
+      <workItem from="1654337976743" duration="11000" />
+      <workItem from="1654343999311" duration="2302000" />
     </task>
     <servers />
   </component>
@@ -89,5 +92,9 @@
         </entry>
       </map>
     </option>
+  </component>
+  <component name="XSLT-Support.FileAssociations.UIState">
+    <expand />
+    <select />
   </component>
 </project>
