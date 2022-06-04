@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './MySelect.module.scss';
+import classes from './style.module.scss';
 
 interface MySelectProps {
     data: { [key: string]: string },

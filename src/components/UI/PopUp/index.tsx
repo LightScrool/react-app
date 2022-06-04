@@ -1,5 +1,5 @@
 import React, {useRef} from 'react';
-import classes from "./PopUp.module.scss";
+import classes from "./style.module.scss";
 import {Transition} from "react-transition-group";
 import {UIProps} from "../../../types";
 

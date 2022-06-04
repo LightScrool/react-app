@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './MyButton.module.scss'
+import classes from './style.module.scss'
 import {UIProps} from "../../../types";
 
 const MyButton = React.forwardRef<HTMLButtonElement, UIProps>((

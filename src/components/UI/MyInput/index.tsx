@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './MyInput.module.scss';
+import classes from './style.module.scss';
 import {UIProps} from "../../../types";
 
 const MyInput = React.forwardRef<HTMLInputElement, UIProps>((

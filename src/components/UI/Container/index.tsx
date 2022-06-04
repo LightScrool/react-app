@@ -1,5 +1,5 @@
 import React from 'react';
-import classes from './Container.module.scss';
+import classes from './style.module.scss';
 import {UIProps} from "../../../types";
 
 const Container = React.forwardRef<HTMLDivElement, UIProps>((

@@ -1,5 +1,5 @@
 import React, {FC} from 'react';
-import './MainPage.scss';
+import './style.scss';
 import Container from "../../components/UI/Container";
 import Footer from "../../components/Footer";
 import MyPhoto from "../../components/MyPhoto";

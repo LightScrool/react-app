@@ -1,5 +1,5 @@
 import React, {ReactNode} from 'react';
-import classes from "./ImageInsideSVG.module.scss";
+import classes from "./style.module.scss";
 
 interface ImageInsideSvgProps {
     viewBox?: string,
