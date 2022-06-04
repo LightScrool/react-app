@@ -1,12 +1,8 @@
-import React, {ReactNode} from 'react';
+import React from 'react';
 import classes from './Container.module.scss';
+import {UIProps} from "../../../types";
 
-interface ContainerProps {
-    children?: ReactNode,
-    className?: string
-}
-
-const Container = React.forwardRef<HTMLDivElement, ContainerProps>((
+const Container = React.forwardRef<HTMLDivElement, UIProps>((
     {
         children,
         className,

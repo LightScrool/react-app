@@ -6,7 +6,7 @@ interface ImageInsideSvgProps {
     imageURL: string,
     imageWidth?: string,
     imageTransform?: string,
-    maskSVG: ReactNode,
+    maskSVG: ReactNode, // TODO: It should be only svg g
     className?: string
 }
 

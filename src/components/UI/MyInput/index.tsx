@@ -1,12 +1,8 @@
-import React, {ReactNode} from 'react';
+import React from 'react';
 import classes from './MyInput.module.scss';
+import {UIProps} from "../../../types";
 
-interface MyInputProps {
-    children?: ReactNode,
-    className?: string
-}
-
-const MyInput = React.forwardRef<HTMLInputElement, MyInputProps>((
+const MyInput = React.forwardRef<HTMLInputElement, UIProps>((
     {
         children,
         className,

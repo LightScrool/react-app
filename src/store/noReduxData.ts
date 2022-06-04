@@ -1,6 +1,6 @@
 // TODO: typing
 import axios from "axios";
-import {IMySliderDataItem, IComment, IPost} from '../types/projectTypes'
+import {IMySliderDataItem, IComment, IPost} from '../types'
 
 const POSTS_DATA_URL: string = "https://jsonplaceholder.typicode.com/posts";
 export const MAX_POSTS_PER_PAGE: number = 10;

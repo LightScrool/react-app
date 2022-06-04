@@ -1,3 +1,5 @@
+import {ReactNode} from "react";
+
 export interface IComment {
     postId: number,
     id: number,
@@ -24,4 +26,9 @@ export interface IRoute {
     path: string,
     exact: boolean,
     element: any // TODO: any is condemned
+}
+
+export interface UIProps {
+    children?: ReactNode,
+    className?: string
 }

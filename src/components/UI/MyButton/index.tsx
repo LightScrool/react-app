@@ -1,12 +1,8 @@
-import React, {ReactNode} from 'react';
+import React from 'react';
 import classes from './MyButton.module.scss'
+import {UIProps} from "../../../types";
 
-interface MyButtonProps {
-    children?: ReactNode,
-    className?: string
-}
-
-const MyButton = React.forwardRef<HTMLButtonElement, MyButtonProps>((
+const MyButton = React.forwardRef<HTMLButtonElement, UIProps>((
     {
         children,
         className,
