@@ -5,7 +5,7 @@
 // import PageNotFound from "./Pages/PageNotFound/PageNotFound";
 // import TestPage from "./Pages/TestPage/TestPage";
 // import ScrollPage from "./Pages/ScrollPage/ScrollPage.tsx";
-import {IRoute} from "./types";
+import {IRoute} from "./types/projectTypes";
 
 const ROUTES: IRoute[] = [
     // {path: "/", exact: true, element: <MainPage/>},

@@ -1,5 +1,5 @@
 // TODO: typing
-import {IPost} from "../types";
+import {IPost} from "../types/projectTypes";
 
 const defaultState = {
     posts: [],

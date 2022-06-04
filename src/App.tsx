@@ -1,4 +1,4 @@
-// TODO: correct import
+// TODO: file is incomplete
 import React from 'react';
 import {FC} from 'react';
 
