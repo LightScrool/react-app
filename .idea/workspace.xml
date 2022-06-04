@@ -2,7 +2,11 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db4e264e-c765-49d5-b98d-a32aa79d72f9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/Header.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/Footer.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/components/MyPhoto.tsx" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/MainPage/MainPage.scss" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/pages/MainPage/index.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -34,6 +38,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="TODO_SCOPE" value="All Places" />
     <property name="WebServerToolWindowFactoryState" value="false" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/pages/MainPage" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
     <property name="nodejs_package_manager_path" value="npm" />
@@ -42,6 +47,9 @@
     <property name="vue.rearranger.settings.migration" value="true" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Programming\Web\react-app\src\pages\MainPage" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
       <recent name="D:\Programming\Web\react-app\src\components" />
       <recent name="D:\Programming\Web\react-app\src" />
@@ -74,7 +82,7 @@
       <workItem from="1654326652979" duration="4864000" />
       <workItem from="1654331577968" duration="4566000" />
       <workItem from="1654337976743" duration="11000" />
-      <workItem from="1654343999311" duration="2934000" />
+      <workItem from="1654343999311" duration="4025000" />
     </task>
     <servers />
   </component>
