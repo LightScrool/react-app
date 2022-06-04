@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="db4e264e-c765-49d5-b98d-a32aa79d72f9" name="Changes" comment="" />
+    <list default="true" id="db4e264e-c765-49d5-b98d-a32aa79d72f9" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/components/Header.tsx" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -10,8 +12,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="TypeScript JSX File" />
         <option value="TypeScript File" />
+        <option value="TypeScript JSX File" />
       </list>
     </option>
   </component>
@@ -41,6 +43,7 @@
   </component>
   <component name="RecentsManager">
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Programming\Web\react-app\src\components" />
       <recent name="D:\Programming\Web\react-app\src" />
       <recent name="D:\Programming\Web\react-app\src\types" />
       <recent name="D:\Programming\Web\react-app\src\styles" />
@@ -71,7 +74,7 @@
       <workItem from="1654326652979" duration="4864000" />
       <workItem from="1654331577968" duration="4566000" />
       <workItem from="1654337976743" duration="11000" />
-      <workItem from="1654343999311" duration="2612000" />
+      <workItem from="1654343999311" duration="2934000" />
     </task>
     <servers />
   </component>
