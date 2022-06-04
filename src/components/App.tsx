@@ -1,16 +1,25 @@
-// TODO: file is incomplete
-import React from 'react';
-import {FC} from 'react';
+import React, {FC} from 'react';
+import Header from "../components/Header";
+import {BrowserRouter, Routes, Route} from "react-router-dom";
+import ROUTES from "../routes";
+
 
 const App:FC = () => {
     return (
-        <div className="App">
-            <header className="App-header">
-                <p>
-                    This is apple: <i className="fa-brands fa-apple"/>
-                </p>
-            </header>
-        </div>
+        <BrowserRouter>
+            <Header/>
+            <Routes>
+                {ROUTES.map(route => {
+                    return (
+                        <Route
+                            key={route.path}
+                            path={route.path}
+                            element={route.element}
+                        />
+                    )
+                })}
+            </Routes>
+        </BrowserRouter>
     );
 };
 

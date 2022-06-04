@@ -1,4 +1,4 @@
-import {ReactNode} from "react";
+import {ReactNode, ReactElement} from "react";
 
 export interface IComment {
     postId: number,
@@ -24,8 +24,7 @@ export interface IMySliderDataItem {
 
 export interface IRoute {
     path: string,
-    exact: boolean,
-    element: any // TODO: any is condemned
+    element: ReactElement
 }
 
 export interface UIProps {
