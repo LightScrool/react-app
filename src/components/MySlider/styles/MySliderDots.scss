@@ -1,0 +1,10 @@
+.MySliderDots{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+
+    position: absolute;
+    bottom: 0;
+
+    list-style-type: none;
+}

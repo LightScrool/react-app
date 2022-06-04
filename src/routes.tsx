@@ -1,19 +1,17 @@
 import {IRoute} from "./types";
 import PageNotFound from "./pages/PageNotFound";
 import MainPage from "./pages/MainPage";
+import SlidersPage from "./pages/SlidersPage";
 // import PostsPage from "./Pages/PostsPage/PostsPage";
 // import SinglePostPage from "./Pages/SinglePostPage/SinglePostPage";
-// import SlidersPage from "./Pages/SlidersPage/SlidersPage.tsx";
-// import TestPage from "./Pages/TestPage/TestPage";
 // import ScrollPage from "./Pages/ScrollPage/ScrollPage.tsx";
 
 const ROUTES: IRoute[] = [
     {path: "*", element: <PageNotFound/>},
     {path: "/", element: <MainPage/>},
+    {path: "/sliders", element: <SlidersPage/>},
     // {path: "/posts", element: <PostsPage/>},
-    // {path: "/test", element: <TestPage/>},
     // {path: "/posts/:id", element: <SinglePostPage/>},
-    // {path: "/sliders", element: <SlidersPage/>},
     // {path: "/scroll", element: <ScrollPage/>},
 ];
 

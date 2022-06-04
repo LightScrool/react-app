@@ -1,0 +1,37 @@
+.MySliderDot{
+    width: 22.5%;
+    padding: 22px 0;
+    border-top: 3px solid #f6eac5;
+
+    text-transform: uppercase;
+    font-family: "Montserrat", serif;
+    font-size: 24px;
+    font-weight: 700;
+    color: #fbf3dc;
+
+    cursor: pointer;
+    &__name{
+        font-size: 18px;
+        font-weight: 400;
+    }
+
+    &__line{
+        position: absolute;
+        top: 0;
+        width: 5.6%;
+        height: 3px;
+
+        display: block;
+        content: "";
+        background-color: transparent;
+    }
+
+    &._active{
+        color: #fff;
+        border-color: #fff;
+
+        & .MySliderDot__line{
+            background-color: #f38181;
+        }
+    }
+}
