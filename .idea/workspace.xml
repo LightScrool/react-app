@@ -2,17 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="db4e264e-c765-49d5-b98d-a32aa79d72f9" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/components/AboutScroll.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ScrollSector.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/components/ScrollSectorText.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/ScrollPage/index.tsx" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/pages/ScrollPage/style.scss" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MySlider/components/MySliderDot.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MySlider/components/MySliderDot.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MySlider/components/MySliderDots.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MySlider/components/MySliderDots.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MySlider/components/MySliderSlide.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MySlider/components/MySliderSlide.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/components/MySlider/index.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/MySlider/index.tsx" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/routes.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/routes.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/components/ScrollSector.tsx" beforeDir="false" afterPath="$PROJECT_DIR$/src/components/ScrollSector.tsx" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/hooks/useScroll.ts" beforeDir="false" afterPath="$PROJECT_DIR$/src/hooks/useScroll.ts" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -92,7 +84,8 @@
       <workItem from="1654326652979" duration="4864000" />
       <workItem from="1654331577968" duration="4566000" />
       <workItem from="1654337976743" duration="11000" />
-      <workItem from="1654343999311" duration="15220000" />
+      <workItem from="1654343999311" duration="15989000" />
+      <workItem from="1654367273925" duration="1070000" />
     </task>
     <servers />
   </component>

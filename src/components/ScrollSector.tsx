@@ -16,24 +16,18 @@ const ScrollSector = () => {
     const TIMEOUT: number = 1500;
 
     const animationBlock = useRef<HTMLDivElement>(null);
-    const [startCoords, setStartCoords] = useState<number>(0);
-    const [endCoords, setEndCoords] = useState<number>(0);
-    const windowPos: number = useScroll();
-
-    const animationPercent = useMemo<number>(() => {
-        let percent = (windowPos - startCoords) / (endCoords - startCoords);
-        if (percent < 0) percent = 0;
-        if (percent > 1) percent = 1;
-        return percent;
-    }, [windowPos, startCoords, endCoords]);
+    const [blockStart, setBlockStart] = useState<number>(0);
+    const [blockEnd, setBlockEnd] = useState<number>(0);
+    const animationPercent: number = useScroll(blockStart, blockEnd);
 
     const active = useMemo<boolean>(() => animationPercent >= 0.5, [animationPercent])
 
     useEffect(() => {
         const calculateAnimationZone = () => {
+            // TODO: This function seems unreliable
             const box = animationBlock.current?.getBoundingClientRect();
-            setStartCoords((box ? box.top : 0) + window.scrollY);
-            setEndCoords((box ? box.bottom : 0) + window.scrollY - window.innerHeight);
+            setBlockStart((box ? box.top : 0) + window.scrollY);
+            setBlockEnd((box ? box.bottom : 0) + window.scrollY - window.innerHeight);
         }
 
         calculateAnimationZone();
