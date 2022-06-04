@@ -1,15 +1,14 @@
-// TODO: typing
-import axios from "axios";
+import axios, {AxiosResponse} from "axios";
 import {IMySliderDataItem, IComment, IPost} from '../types'
 
 const POSTS_DATA_URL: string = "https://jsonplaceholder.typicode.com/posts";
 export const MAX_POSTS_PER_PAGE: number = 10;
 
-export async function fetchSinglePost(id: number) {
+export async function fetchSinglePost(id: number): Promise<AxiosResponse<IPost>> {
     return await axios.get<IPost>(`${POSTS_DATA_URL}/${id}`);
 }
 
-export async function fetchPostComments(id: number) {
+export async function fetchPostComments(id: number): Promise<AxiosResponse<IComment[]>> {
     return await axios.get<IComment[]>(`${POSTS_DATA_URL}/${id}/comments`);
 }
 

@@ -13,9 +13,9 @@ const DELETE_POST: string = "DELETE_POST";
 const SET_POSTS: string = "SET_POSTS";
 const DELETE_ALL_POSTS: string = "DELETE_ALL_POSTS";
 const CLEAR_DATA: string = "CLEAR_DATA";
-const SET_SEARCH_QUERY: string = "SET_SEARCH_QUERY"
-const SET_SORT_FIELD: string = "SET_SORT_FIELD"
-const SET_CURRENT_PAGE: string = "SET_CURRENT_PAGE"
+const SET_SEARCH_QUERY: string = "SET_SEARCH_QUERY";
+const SET_SORT_FIELD: string = "SET_SORT_FIELD";
+const SET_CURRENT_PAGE: string = "SET_CURRENT_PAGE";
 
 export const postsReducer = (state = defaultState, action: any) => {
     switch (action.type) {

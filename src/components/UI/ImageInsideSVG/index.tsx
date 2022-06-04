@@ -1,4 +1,4 @@
-import React, {ReactNode} from 'react';
+import React, {ReactElement} from 'react';
 import classes from "./style.module.scss";
 
 interface ImageInsideSvgProps {
@@ -6,7 +6,7 @@ interface ImageInsideSvgProps {
     imageURL: string,
     imageWidth?: string,
     imageTransform?: string,
-    maskSVG: ReactNode, // TODO: It should be only svg g
+    maskSVG: ReactElement<SVGGElement>,
     className?: string
 }
 
